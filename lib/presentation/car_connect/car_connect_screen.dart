@@ -51,12 +51,11 @@ class CarConnectScreen extends StatelessWidget {
 
           return Stack(
             children: [
-              /// Google Map
               GoogleMap(
                 initialCameraPosition: _initialCameraPosition,
                 onMapCreated: (controller) async {
                   mapController.complete(controller);
-                  cubit.setMapController(controller);
+                  await cubit.setMapController(controller);
                   if (cubit.state.currentLocation != null) {
                     await controller.animateCamera(
                       CameraUpdate.newLatLngZoom(
@@ -67,12 +66,18 @@ class CarConnectScreen extends StatelessWidget {
                   }
                 },
                 markers: state.markers,
-                polylines: state.polylines,
+                polylines: {
+                  Polyline(
+                    polylineId: const PolylineId('route'),
+                    color: Colors.blue,
+                    width: 5,
+                    points: state.polylines,
+                  ),
+                },
                 onTap: cubit.selectPoint,
                 myLocationEnabled: true,
                 myLocationButtonEnabled: false,
                 zoomControlsEnabled: false,
-                mapType: MapType.normal,
               ),
 
               /// Floating Top AppBar with search + theme + language
@@ -174,7 +179,7 @@ class CarConnectScreen extends StatelessWidget {
                 child: FloatingActionButton.extended(
                   onPressed: () => context.read<CarConnectCubit>().clearRoute(),
                   icon: const Icon(Icons.clear),
-                  label: const Text("Clear"),
+                  label: const Text('Clear'),
                   backgroundColor: Colors.redAccent,
                 ),
               ),

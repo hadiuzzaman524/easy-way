@@ -21,15 +21,15 @@ class _CarConnectRemoteDataSource implements CarConnectRemoteDataSource {
   Future<GoogleDirectionResponse> getDirections({
     required String origin,
     required String destination,
-    String mode = 'driving',
     required String apiKey,
+    String mode = 'driving',
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'origin': origin,
       r'destination': destination,
-      r'mode': mode,
       r'key': apiKey,
+      r'mode': mode,
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;

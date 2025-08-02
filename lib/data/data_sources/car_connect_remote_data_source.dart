@@ -17,7 +17,7 @@ abstract class CarConnectRemoteDataSource {
   Future<GoogleDirectionResponse> getDirections({
     @Query('origin') required String origin,
     @Query('destination') required String destination,
-    @Query('mode') String mode = 'driving',
     @Query('key') required String apiKey,
+    @Query('mode') String mode = 'driving',
   });
 }

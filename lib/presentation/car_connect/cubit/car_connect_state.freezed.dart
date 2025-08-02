@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$CarConnectState {
 
- LatLng? get origin; LatLng? get destination; Set<Marker> get markers; Set<Polyline> get polylines; String? get distance; String? get duration; bool get isLoading; LatLng? get currentLocation; bool get showCurrentLocationMarker;
+ LatLng? get origin; LatLng? get destination; Set<Marker> get markers; List<LatLng> get polylines; String? get distance; String? get duration; bool get isLoading; LatLng? get currentLocation; bool get showCurrentLocationMarker;
 /// Create a copy of CarConnectState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -45,7 +45,7 @@ abstract mixin class $CarConnectStateCopyWith<$Res>  {
   factory $CarConnectStateCopyWith(CarConnectState value, $Res Function(CarConnectState) _then) = _$CarConnectStateCopyWithImpl;
 @useResult
 $Res call({
- LatLng? origin, LatLng? destination, Set<Marker> markers, Set<Polyline> polylines, String? distance, String? duration, bool isLoading, LatLng? currentLocation, bool showCurrentLocationMarker
+ LatLng? origin, LatLng? destination, Set<Marker> markers, List<LatLng> polylines, String? distance, String? duration, bool isLoading, LatLng? currentLocation, bool showCurrentLocationMarker
 });
 
 
@@ -68,7 +68,7 @@ origin: freezed == origin ? _self.origin : origin // ignore: cast_nullable_to_no
 as LatLng?,destination: freezed == destination ? _self.destination : destination // ignore: cast_nullable_to_non_nullable
 as LatLng?,markers: null == markers ? _self.markers : markers // ignore: cast_nullable_to_non_nullable
 as Set<Marker>,polylines: null == polylines ? _self.polylines : polylines // ignore: cast_nullable_to_non_nullable
-as Set<Polyline>,distance: freezed == distance ? _self.distance : distance // ignore: cast_nullable_to_non_nullable
+as List<LatLng>,distance: freezed == distance ? _self.distance : distance // ignore: cast_nullable_to_non_nullable
 as String?,duration: freezed == duration ? _self.duration : duration // ignore: cast_nullable_to_non_nullable
 as String?,isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
 as bool,currentLocation: freezed == currentLocation ? _self.currentLocation : currentLocation // ignore: cast_nullable_to_non_nullable
@@ -158,7 +158,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( LatLng? origin,  LatLng? destination,  Set<Marker> markers,  Set<Polyline> polylines,  String? distance,  String? duration,  bool isLoading,  LatLng? currentLocation,  bool showCurrentLocationMarker)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( LatLng? origin,  LatLng? destination,  Set<Marker> markers,  List<LatLng> polylines,  String? distance,  String? duration,  bool isLoading,  LatLng? currentLocation,  bool showCurrentLocationMarker)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _CarConnectState() when $default != null:
 return $default(_that.origin,_that.destination,_that.markers,_that.polylines,_that.distance,_that.duration,_that.isLoading,_that.currentLocation,_that.showCurrentLocationMarker);case _:
@@ -179,7 +179,7 @@ return $default(_that.origin,_that.destination,_that.markers,_that.polylines,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( LatLng? origin,  LatLng? destination,  Set<Marker> markers,  Set<Polyline> polylines,  String? distance,  String? duration,  bool isLoading,  LatLng? currentLocation,  bool showCurrentLocationMarker)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( LatLng? origin,  LatLng? destination,  Set<Marker> markers,  List<LatLng> polylines,  String? distance,  String? duration,  bool isLoading,  LatLng? currentLocation,  bool showCurrentLocationMarker)  $default,) {final _that = this;
 switch (_that) {
 case _CarConnectState():
 return $default(_that.origin,_that.destination,_that.markers,_that.polylines,_that.distance,_that.duration,_that.isLoading,_that.currentLocation,_that.showCurrentLocationMarker);case _:
@@ -199,7 +199,7 @@ return $default(_that.origin,_that.destination,_that.markers,_that.polylines,_th
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( LatLng? origin,  LatLng? destination,  Set<Marker> markers,  Set<Polyline> polylines,  String? distance,  String? duration,  bool isLoading,  LatLng? currentLocation,  bool showCurrentLocationMarker)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( LatLng? origin,  LatLng? destination,  Set<Marker> markers,  List<LatLng> polylines,  String? distance,  String? duration,  bool isLoading,  LatLng? currentLocation,  bool showCurrentLocationMarker)?  $default,) {final _that = this;
 switch (_that) {
 case _CarConnectState() when $default != null:
 return $default(_that.origin,_that.destination,_that.markers,_that.polylines,_that.distance,_that.duration,_that.isLoading,_that.currentLocation,_that.showCurrentLocationMarker);case _:
@@ -214,7 +214,7 @@ return $default(_that.origin,_that.destination,_that.markers,_that.polylines,_th
 
 
 class _CarConnectState implements CarConnectState {
-  const _CarConnectState({this.origin, this.destination, final  Set<Marker> markers = const <Marker>{}, final  Set<Polyline> polylines = const <Polyline>{}, this.distance, this.duration, this.isLoading = false, this.currentLocation, this.showCurrentLocationMarker = true}): _markers = markers,_polylines = polylines;
+  const _CarConnectState({this.origin, this.destination, final  Set<Marker> markers = const <Marker>{}, final  List<LatLng> polylines = const [], this.distance, this.duration, this.isLoading = false, this.currentLocation, this.showCurrentLocationMarker = true}): _markers = markers,_polylines = polylines;
   
 
 @override final  LatLng? origin;
@@ -226,11 +226,11 @@ class _CarConnectState implements CarConnectState {
   return EqualUnmodifiableSetView(_markers);
 }
 
- final  Set<Polyline> _polylines;
-@override@JsonKey() Set<Polyline> get polylines {
-  if (_polylines is EqualUnmodifiableSetView) return _polylines;
+ final  List<LatLng> _polylines;
+@override@JsonKey() List<LatLng> get polylines {
+  if (_polylines is EqualUnmodifiableListView) return _polylines;
   // ignore: implicit_dynamic_type
-  return EqualUnmodifiableSetView(_polylines);
+  return EqualUnmodifiableListView(_polylines);
 }
 
 @override final  String? distance;
@@ -269,7 +269,7 @@ abstract mixin class _$CarConnectStateCopyWith<$Res> implements $CarConnectState
   factory _$CarConnectStateCopyWith(_CarConnectState value, $Res Function(_CarConnectState) _then) = __$CarConnectStateCopyWithImpl;
 @override @useResult
 $Res call({
- LatLng? origin, LatLng? destination, Set<Marker> markers, Set<Polyline> polylines, String? distance, String? duration, bool isLoading, LatLng? currentLocation, bool showCurrentLocationMarker
+ LatLng? origin, LatLng? destination, Set<Marker> markers, List<LatLng> polylines, String? distance, String? duration, bool isLoading, LatLng? currentLocation, bool showCurrentLocationMarker
 });
 
 
@@ -292,7 +292,7 @@ origin: freezed == origin ? _self.origin : origin // ignore: cast_nullable_to_no
 as LatLng?,destination: freezed == destination ? _self.destination : destination // ignore: cast_nullable_to_non_nullable
 as LatLng?,markers: null == markers ? _self._markers : markers // ignore: cast_nullable_to_non_nullable
 as Set<Marker>,polylines: null == polylines ? _self._polylines : polylines // ignore: cast_nullable_to_non_nullable
-as Set<Polyline>,distance: freezed == distance ? _self.distance : distance // ignore: cast_nullable_to_non_nullable
+as List<LatLng>,distance: freezed == distance ? _self.distance : distance // ignore: cast_nullable_to_non_nullable
 as String?,duration: freezed == duration ? _self.duration : duration // ignore: cast_nullable_to_non_nullable
 as String?,isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
 as bool,currentLocation: freezed == currentLocation ? _self.currentLocation : currentLocation // ignore: cast_nullable_to_non_nullable

@@ -9,7 +9,7 @@ abstract class CarConnectState with _$CarConnectState {
     LatLng? origin,
     LatLng? destination,
     @Default(<Marker>{}) Set<Marker> markers,
-    @Default(<Polyline>{}) Set<Polyline> polylines,
+    @Default([]) List<LatLng> polylines,
     String? distance,
     String? duration,
     @Default(false) bool isLoading,

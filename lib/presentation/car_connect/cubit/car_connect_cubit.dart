@@ -17,18 +17,17 @@ class CarConnectCubit extends Cubit<CarConnectState> {
 
   GoogleMapController? _mapController;
 
-  void selectPoint(LatLng position) async {
+  Future<void> selectPoint(LatLng position) async {
     if (state.origin != null && state.destination != null) {
-      // Route complete; ignore taps until clear
       return;
     }
 
     if (state.origin == null) {
       final updatedMarkers = Set<Marker>.from(state.markers)
-        ..removeWhere((m) => m.markerId.value == 'current_location');
-      updatedMarkers.add(
-        Marker(markerId: const MarkerId('origin'), position: position),
-      );
+        ..removeWhere((m) => m.markerId.value == 'current_location')
+        ..add(
+          Marker(markerId: const MarkerId('origin'), position: position),
+        );
 
       emit(
         state.copyWith(
@@ -37,7 +36,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
           markers: updatedMarkers,
           distance: null,
           duration: null,
-          polylines: {},
+          polylines: [],
           isLoading: false,
           showCurrentLocationMarker: false,
         ),
@@ -68,7 +67,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     if (routeInfo != null) {
       emit(
         state.copyWith(
-          polylines: routeInfo.polylines,
+          polylines: routeInfo.polyline,
           distance: routeInfo.distance,
           duration: routeInfo.duration,
           isLoading: false,
@@ -87,25 +86,22 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     bool serviceEnabled;
     LocationPermission permission;
 
-    // Check if location services are enabled
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      debugPrint("Location services are disabled.");
+      debugPrint('Location services are disabled.');
       return;
     }
-
-    // Check for permissions
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        debugPrint("Location permissions are denied.");
+        debugPrint('Location permissions are denied.');
         return;
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
-      debugPrint("Location permissions are permanently denied.");
+      debugPrint('Location permissions are permanently denied.');
       return;
     }
 
@@ -116,17 +112,17 @@ class CarConnectCubit extends Cubit<CarConnectState> {
 
     if (state.origin == null) {
       final updatedMarkers = Set<Marker>.from(state.markers)
-        ..removeWhere((m) => m.markerId.value == 'current_location');
-      updatedMarkers.add(
-        Marker(
-          markerId: const MarkerId('current_location'),
-          position: currentLatLng,
-          icon: BitmapDescriptor.defaultMarkerWithHue(
-            BitmapDescriptor.hueAzure,
+        ..removeWhere((m) => m.markerId.value == 'current_location')
+        ..add(
+          Marker(
+            markerId: const MarkerId('current_location'),
+            position: currentLatLng,
+            icon: BitmapDescriptor.defaultMarkerWithHue(
+              BitmapDescriptor.hueAzure,
+            ),
+            infoWindow: const InfoWindow(title: 'Current Location'),
           ),
-          infoWindow: const InfoWindow(title: 'Current Location'),
-        ),
-      );
+        );
 
       emit(
         state.copyWith(
@@ -161,7 +157,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     }
   }
 
-  void setMapController(GoogleMapController controller) {
+  Future<void> setMapController(GoogleMapController controller) async {
     _mapController = controller;
   }
 }
