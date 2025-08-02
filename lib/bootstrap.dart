@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
-
 import 'package:bloc/bloc.dart';
-import 'package:easy_way/core/app_constant.dart';
 import 'package:easy_way/injector/injector.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -27,6 +25,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
   await Hive.initFlutter();
+  await Hive.openBox<dynamic>('myAppData');
   // await Hive.openBox(AppConstant.localDatabaseBoxName);
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);

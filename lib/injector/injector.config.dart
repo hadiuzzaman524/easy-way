@@ -19,8 +19,10 @@ import 'package:easy_way/data/repository/user_preferences_repository.dart'
     as _i1007;
 import 'package:easy_way/domain/services/car_connect_services.dart' as _i495;
 import 'package:easy_way/domain/services/user_preferences_service.dart' as _i10;
+import 'package:easy_way/domain/usecases/get_language_usecase.dart' as _i436;
 import 'package:easy_way/domain/usecases/get_route_usecase.dart' as _i429;
 import 'package:easy_way/domain/usecases/get_theme_mode_usecase.dart' as _i758;
+import 'package:easy_way/domain/usecases/set_language_usecase.dart' as _i1036;
 import 'package:easy_way/domain/usecases/set_theme_mode_usecase.dart' as _i1072;
 import 'package:easy_way/infrastructure/module/network_module.dart' as _i567;
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart'
@@ -54,20 +56,28 @@ _i174.GetIt $initGetIt(
       gh<_i361.Dio>(instanceName: 'unauthenticated'),
     ),
   );
+  gh.factory<_i1036.SetLanguageUseCase>(
+    () => _i1036.SetLanguageUseCase(gh<_i10.UserPreferences>()),
+  );
   gh.factory<_i758.GetThemeModeUseCase>(
     () => _i758.GetThemeModeUseCase(gh<_i10.UserPreferences>()),
   );
   gh.factory<_i1072.SetThemeModeUseCase>(
     () => _i1072.SetThemeModeUseCase(gh<_i10.UserPreferences>()),
   );
-  gh.factory<_i495.CarConnectServices>(
-    () => _i99.CarConnectRepository(gh<_i743.CarConnectRemoteDataSource>()),
+  gh.factory<_i436.GetLanguageUseCase>(
+    () => _i436.GetLanguageUseCase(gh<_i10.UserPreferences>()),
   );
   gh.factory<_i155.AppThemeCubit>(
     () => _i155.AppThemeCubit(
       gh<_i758.GetThemeModeUseCase>(),
       gh<_i1072.SetThemeModeUseCase>(),
+      gh<_i436.GetLanguageUseCase>(),
+      gh<_i1036.SetLanguageUseCase>(),
     ),
+  );
+  gh.factory<_i495.CarConnectServices>(
+    () => _i99.CarConnectRepository(gh<_i743.CarConnectRemoteDataSource>()),
   );
   gh.factory<_i429.GetRouteUseCase>(
     () => _i429.GetRouteUseCase(gh<_i495.CarConnectServices>()),

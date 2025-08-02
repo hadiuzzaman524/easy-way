@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$AppThemeState {
 
- bool get isDarkTheme; String get mapStyle;
+ bool get isDarkTheme; bool get isBangla; String get mapStyle;
 /// Create a copy of AppThemeState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -25,16 +25,16 @@ $AppThemeStateCopyWith<AppThemeState> get copyWith => _$AppThemeStateCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppThemeState&&(identical(other.isDarkTheme, isDarkTheme) || other.isDarkTheme == isDarkTheme)&&(identical(other.mapStyle, mapStyle) || other.mapStyle == mapStyle));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppThemeState&&(identical(other.isDarkTheme, isDarkTheme) || other.isDarkTheme == isDarkTheme)&&(identical(other.isBangla, isBangla) || other.isBangla == isBangla)&&(identical(other.mapStyle, mapStyle) || other.mapStyle == mapStyle));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,isDarkTheme,mapStyle);
+int get hashCode => Object.hash(runtimeType,isDarkTheme,isBangla,mapStyle);
 
 @override
 String toString() {
-  return 'AppThemeState(isDarkTheme: $isDarkTheme, mapStyle: $mapStyle)';
+  return 'AppThemeState(isDarkTheme: $isDarkTheme, isBangla: $isBangla, mapStyle: $mapStyle)';
 }
 
 
@@ -45,7 +45,7 @@ abstract mixin class $AppThemeStateCopyWith<$Res>  {
   factory $AppThemeStateCopyWith(AppThemeState value, $Res Function(AppThemeState) _then) = _$AppThemeStateCopyWithImpl;
 @useResult
 $Res call({
- bool isDarkTheme, String mapStyle
+ bool isDarkTheme, bool isBangla, String mapStyle
 });
 
 
@@ -62,9 +62,10 @@ class _$AppThemeStateCopyWithImpl<$Res>
 
 /// Create a copy of AppThemeState
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? isDarkTheme = null,Object? mapStyle = null,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? isDarkTheme = null,Object? isBangla = null,Object? mapStyle = null,}) {
   return _then(_self.copyWith(
 isDarkTheme: null == isDarkTheme ? _self.isDarkTheme : isDarkTheme // ignore: cast_nullable_to_non_nullable
+as bool,isBangla: null == isBangla ? _self.isBangla : isBangla // ignore: cast_nullable_to_non_nullable
 as bool,mapStyle: null == mapStyle ? _self.mapStyle : mapStyle // ignore: cast_nullable_to_non_nullable
 as String,
   ));
@@ -151,10 +152,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool isDarkTheme,  String mapStyle)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool isDarkTheme,  bool isBangla,  String mapStyle)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _AppThemeState() when $default != null:
-return $default(_that.isDarkTheme,_that.mapStyle);case _:
+return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
   return orElse();
 
 }
@@ -172,10 +173,10 @@ return $default(_that.isDarkTheme,_that.mapStyle);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool isDarkTheme,  String mapStyle)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool isDarkTheme,  bool isBangla,  String mapStyle)  $default,) {final _that = this;
 switch (_that) {
 case _AppThemeState():
-return $default(_that.isDarkTheme,_that.mapStyle);case _:
+return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -192,10 +193,10 @@ return $default(_that.isDarkTheme,_that.mapStyle);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool isDarkTheme,  String mapStyle)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool isDarkTheme,  bool isBangla,  String mapStyle)?  $default,) {final _that = this;
 switch (_that) {
 case _AppThemeState() when $default != null:
-return $default(_that.isDarkTheme,_that.mapStyle);case _:
+return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
   return null;
 
 }
@@ -207,10 +208,11 @@ return $default(_that.isDarkTheme,_that.mapStyle);case _:
 
 
 class _AppThemeState implements AppThemeState {
-  const _AppThemeState({required this.isDarkTheme, required this.mapStyle});
+  const _AppThemeState({required this.isDarkTheme, required this.isBangla, required this.mapStyle});
   
 
 @override final  bool isDarkTheme;
+@override final  bool isBangla;
 @override final  String mapStyle;
 
 /// Create a copy of AppThemeState
@@ -223,16 +225,16 @@ _$AppThemeStateCopyWith<_AppThemeState> get copyWith => __$AppThemeStateCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AppThemeState&&(identical(other.isDarkTheme, isDarkTheme) || other.isDarkTheme == isDarkTheme)&&(identical(other.mapStyle, mapStyle) || other.mapStyle == mapStyle));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AppThemeState&&(identical(other.isDarkTheme, isDarkTheme) || other.isDarkTheme == isDarkTheme)&&(identical(other.isBangla, isBangla) || other.isBangla == isBangla)&&(identical(other.mapStyle, mapStyle) || other.mapStyle == mapStyle));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,isDarkTheme,mapStyle);
+int get hashCode => Object.hash(runtimeType,isDarkTheme,isBangla,mapStyle);
 
 @override
 String toString() {
-  return 'AppThemeState(isDarkTheme: $isDarkTheme, mapStyle: $mapStyle)';
+  return 'AppThemeState(isDarkTheme: $isDarkTheme, isBangla: $isBangla, mapStyle: $mapStyle)';
 }
 
 
@@ -243,7 +245,7 @@ abstract mixin class _$AppThemeStateCopyWith<$Res> implements $AppThemeStateCopy
   factory _$AppThemeStateCopyWith(_AppThemeState value, $Res Function(_AppThemeState) _then) = __$AppThemeStateCopyWithImpl;
 @override @useResult
 $Res call({
- bool isDarkTheme, String mapStyle
+ bool isDarkTheme, bool isBangla, String mapStyle
 });
 
 
@@ -260,9 +262,10 @@ class __$AppThemeStateCopyWithImpl<$Res>
 
 /// Create a copy of AppThemeState
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? isDarkTheme = null,Object? mapStyle = null,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? isDarkTheme = null,Object? isBangla = null,Object? mapStyle = null,}) {
   return _then(_AppThemeState(
 isDarkTheme: null == isDarkTheme ? _self.isDarkTheme : isDarkTheme // ignore: cast_nullable_to_non_nullable
+as bool,isBangla: null == isBangla ? _self.isBangla : isBangla // ignore: cast_nullable_to_non_nullable
 as bool,mapStyle: null == mapStyle ? _self.mapStyle : mapStyle // ignore: cast_nullable_to_non_nullable
 as String,
   ));

@@ -1,6 +1,6 @@
 import 'package:easy_way/core/app_colors.dart';
 import 'package:easy_way/injector/injector.dart';
-import 'package:easy_way/l10n/l10n.dart';
+import 'package:easy_way/l10n/gen/app_localizations.dart';
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart';
 import 'package:easy_way/presentation/cubits/app_theme/app_theme_cubit.dart';
 import 'package:easy_way/presentation/cubits/app_theme/app_theme_state.dart';
@@ -26,6 +26,8 @@ class App extends StatelessWidget {
       child: BlocBuilder<AppThemeCubit, AppThemeState>(
         builder: (context, state) {
           final isDarkMode = state.isDarkTheme;
+          final isBangla = state.isBangla;
+
           SystemChrome.setSystemUIOverlayStyle(
             SystemUiOverlayStyle(
               statusBarColor: context.colors.backGroundColor,
@@ -46,6 +48,7 @@ class App extends StatelessWidget {
                     ),
               useMaterial3: true,
             ),
+            locale: isBangla ? const Locale('bn') : const Locale('en'),
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
           );

@@ -13,6 +13,7 @@ dependencies:
   equatable: ^2.0.7
   flutter:
     sdk: flutter
+  flutter_advanced_switch: ^3.1.0
   flutter_bloc: ^9.1.1
   flutter_gen_runner: ^5.11.0
   flutter_localizations:

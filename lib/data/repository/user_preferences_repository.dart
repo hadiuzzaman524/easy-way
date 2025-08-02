@@ -14,4 +14,11 @@ class UserPreferencesImpl implements UserPreferences {
 
   @override
   Future<bool> getDarkMode() => _dataSource.getDarkMode();
+
+  @override
+  Future<bool> getLanguage() => _dataSource.getLanguage();
+
+  @override
+  Future<void> setLanguage({required bool isBangla}) =>
+      _dataSource.setLanguage(isBangla: isBangla);
 }

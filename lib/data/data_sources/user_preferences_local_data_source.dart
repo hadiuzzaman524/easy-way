@@ -4,15 +4,25 @@ import 'package:injectable/injectable.dart';
 
 @lazySingleton
 class UserPreferencesLocalDataSource {
-  static const _isDarkModeKey = 'isDarkMode';
+
+  final _isDarkModeKey = 'isDarkMode';
+  final _isLanguageBangla = 'isBangla';
+
+  final Box<dynamic> box = Hive.box<dynamic>('myAppData');
 
   Future<void> setDarkMode({required bool isDarkMode}) async {
-    final box = await Hive.openBox(AppConstant.localDatabaseBoxName);
     await box.put(_isDarkModeKey, isDarkMode);
   }
 
   Future<bool> getDarkMode() async {
-    final box = await Hive.openBox(AppConstant.localDatabaseBoxName);
     return box.get(_isDarkModeKey, defaultValue: true) as bool;
+  }
+
+  Future<void> setLanguage({required bool isBangla}) async {
+    await box.put(_isLanguageBangla, isBangla);
+  }
+
+  Future<bool> getLanguage() async {
+    return box.get(_isLanguageBangla, defaultValue: true) as bool;
   }
 }
