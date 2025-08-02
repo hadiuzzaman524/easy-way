@@ -1,9 +1,11 @@
+import 'package:easy_way/gen/assets.gen.dart';
 import 'package:easy_way/presentation/cubits/app_theme/app_theme_cubit.dart';
+import 'package:easy_way/presentation/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SearchLocation extends StatelessWidget {
-  const SearchLocation({super.key});
+class FloatingAppBar extends StatelessWidget {
+  const FloatingAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,31 +25,14 @@ class SearchLocation extends StatelessWidget {
             vertical: 8,
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              GestureDetector(
-                onTap: () async {},
-                child: Container(
-                  height: 50,
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                  decoration: BoxDecoration(
-                    color: Colors.grey[100],
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  alignment: Alignment.centerLeft,
-                  child: const Row(
-                    children: [
-                      Icon(Icons.search),
-                      SizedBox(width: 8),
-                      Text(
-                        'Search destination...',
-                        style: TextStyle(color: Colors.black54),
-                      ),
-                    ],
-                  ),
-                ),
+              Assets.images.easyway.image(
+                height: 45,
+                width: 45,
               ),
-
-              /// Theme Toggle
+              AppText.headline2('Easy Way'),
+              const Spacer(),
               IconButton(
                 icon: Icon(
                   Theme.of(context).brightness == Brightness.dark
@@ -58,8 +43,6 @@ class SearchLocation extends StatelessWidget {
                   context.read<AppThemeCubit>().changeThemeMode();
                 },
               ),
-
-              /// Language Dropdown
               DropdownButton<String>(
                 underline: const SizedBox(),
                 icon: const Icon(Icons.language),

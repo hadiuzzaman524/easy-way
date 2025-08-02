@@ -4,7 +4,7 @@ import 'package:easy_way/presentation/car_connect/widgets/clear_button.dart';
 import 'package:easy_way/presentation/car_connect/widgets/current_location_button.dart';
 import 'package:easy_way/presentation/car_connect/widgets/distance_card.dart';
 import 'package:easy_way/presentation/car_connect/widgets/google_map_view.dart';
-import 'package:easy_way/presentation/car_connect/widgets/search_bar.dart';
+import 'package:easy_way/presentation/car_connect/widgets/floating_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,7 +20,7 @@ class CarConnectScreen extends StatelessWidget {
       body: Stack(
         children: [
           const GoogleMapView(),
-          const SearchLocation(),
+          const FloatingAppBar(),
           if (state.isLoading) const Center(child: CircularProgressIndicator()),
           const CurrentLocationButton(),
           const ClearButton(),

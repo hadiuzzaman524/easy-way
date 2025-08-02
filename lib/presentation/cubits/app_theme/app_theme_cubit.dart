@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:easy_way/core/app_constant.dart';
+import 'package:easy_way/gen/assets.gen.dart';
 import 'package:easy_way/presentation/cubits/app_theme/app_theme_state.dart';
 import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
@@ -18,8 +19,8 @@ class AppThemeCubit extends Cubit<AppThemeState> {
     }
     await box.put('isDarkMode', !isDarkMode);
     final path = isDarkMode
-        ? AppConstant.mapLightStylePath
-        : AppConstant.mapDarkStylePath;
+        ? Assets.json.lightMapStyle
+        : Assets.json.darkMapStyle;
 
     final mapStyle = await rootBundle.loadString(path);
     emit(state.copyWith(isDarkTheme: !isDarkMode, mapStyle: mapStyle));
