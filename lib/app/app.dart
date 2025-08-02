@@ -6,6 +6,7 @@ import 'package:easy_way/presentation/cubits/app_theme/app_theme_cubit.dart';
 import 'package:easy_way/presentation/cubits/app_theme/app_theme_state.dart';
 import 'package:easy_way/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class App extends StatelessWidget {
@@ -23,6 +24,11 @@ class App extends StatelessWidget {
       child: BlocBuilder<AppThemeCubit, AppThemeState>(
         builder: (context, state) {
           final isDarkMode = state.isDarkTheme;
+          SystemChrome.setSystemUIOverlayStyle(
+            SystemUiOverlayStyle(
+              statusBarColor: context.colors.backGroundColor,
+            ),
+          );
           return MaterialApp.router(
             routerDelegate: _appRouter.delegate(),
             routeInformationParser: _appRouter.defaultRouteParser(),
@@ -31,12 +37,12 @@ class App extends StatelessWidget {
               scaffoldBackgroundColor: context.colors.backGroundColor,
               colorScheme: isDarkMode
                   ? const ColorScheme.dark().copyWith(
-                primary: context.colors.primaryColor,
-              )
+                      primary: context.colors.primaryColor,
+                    )
                   : const ColorScheme.light().copyWith(
-                primary: context.colors.primaryColor,
-              ),
-              useMaterial3: false,
+                      primary: context.colors.primaryColor,
+                    ),
+              useMaterial3: true,
             ),
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
