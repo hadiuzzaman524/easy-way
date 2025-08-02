@@ -4,5 +4,8 @@ part 'app_theme_state.freezed.dart';
 
 @freezed
 abstract class AppThemeState with _$AppThemeState {
-  const factory AppThemeState({required bool isDarkTheme}) = _AppThemeState;
+  const factory AppThemeState({
+    required bool isDarkTheme,
+    required String mapStyle,
+  }) = _AppThemeState;
 }

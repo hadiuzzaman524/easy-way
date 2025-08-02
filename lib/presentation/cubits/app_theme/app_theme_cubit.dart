@@ -1,10 +1,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:easy_way/core/app_constant.dart';
 import 'package:easy_way/presentation/cubits/app_theme/app_theme_state.dart';
+import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 
 class AppThemeCubit extends Cubit<AppThemeState> {
-  AppThemeCubit() : super(const AppThemeState(isDarkTheme: true));
+  AppThemeCubit()
+    : super(const AppThemeState(isDarkTheme: true, mapStyle: '[]'));
 
   Future<void> changeThemeMode() async {
     final box = await Hive.openBox(AppConstant.localDatabaseBoxName);
@@ -15,7 +17,12 @@ class AppThemeCubit extends Cubit<AppThemeState> {
       isDarkMode = false;
     }
     await box.put('isDarkMode', !isDarkMode);
-    emit(state.copyWith(isDarkTheme: !isDarkMode));
+    final path = isDarkMode
+        ? AppConstant.mapLightStylePath
+        : AppConstant.mapDarkStylePath;
+
+    final mapStyle = await rootBundle.loadString(path);
+    emit(state.copyWith(isDarkTheme: !isDarkMode, mapStyle: mapStyle));
   }
 
   Future<void> getThemeMode() async {
