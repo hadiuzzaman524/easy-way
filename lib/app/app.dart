@@ -18,7 +18,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (ctx) => AppThemeCubit()..getThemeMode()),
+        BlocProvider<AppThemeCubit>(
+          create: (ctx) => injector()..getThemeMode(),
+        ),
         BlocProvider<CarConnectCubit>(create: (ctx) => injector()),
       ],
       child: BlocBuilder<AppThemeCubit, AppThemeState>(
