@@ -89,7 +89,12 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
       debugPrint('Location services are disabled.');
-      return;
+      final opened = await Geolocator.openLocationSettings();
+      serviceEnabled = await Geolocator.isLocationServiceEnabled();
+      if (!serviceEnabled) {
+        debugPrint('User did not enable location services.');
+        return;
+      }
     }
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
