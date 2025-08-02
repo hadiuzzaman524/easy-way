@@ -1,7 +1,10 @@
 import 'dart:async';
 import 'package:auto_route/annotations.dart';
+import 'package:easy_way/core/app_colors.dart';
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart';
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_state.dart';
+import 'package:easy_way/presentation/cubits/app_theme/app_theme_cubit.dart';
+import 'package:easy_way/presentation/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -17,10 +20,9 @@ class CarConnectScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Completer<GoogleMapController> mapController = Completer();
+    final mapController = Completer<GoogleMapController>();
 
     return Scaffold(
-      // The BottomAppBar is now used
       bottomNavigationBar: BlocBuilder<CarConnectCubit, CarConnectState>(
         builder: (context, state) {
           if (state.distance != null && state.duration != null) {
@@ -48,7 +50,6 @@ class CarConnectScreen extends StatelessWidget {
       body: BlocBuilder<CarConnectCubit, CarConnectState>(
         builder: (context, state) {
           final cubit = context.read<CarConnectCubit>();
-
           return Stack(
             children: [
               GoogleMap(
@@ -80,7 +81,6 @@ class CarConnectScreen extends StatelessWidget {
                 zoomControlsEnabled: false,
               ),
 
-              /// Floating Top AppBar with search + theme + language
               Positioned(
                 top: 40,
                 left: 16,
@@ -98,11 +98,8 @@ class CarConnectScreen extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        /// Search Field
-                        /// In CarRouteScreen (inside the top card):
                         GestureDetector(
                           onTap: () async {},
-
                           child: Container(
                             height: 50,
                             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -116,7 +113,7 @@ class CarConnectScreen extends StatelessWidget {
                                 Icon(Icons.search),
                                 SizedBox(width: 8),
                                 Text(
-                                  "Search destination...",
+                                  'Search destination...',
                                   style: TextStyle(color: Colors.black54),
                                 ),
                               ],
@@ -132,7 +129,7 @@ class CarConnectScreen extends StatelessWidget {
                                 : Icons.dark_mode,
                           ),
                           onPressed: () {
-                            // TODO: Implement theme toggle logic
+                            context.read<AppThemeCubit>().changeThemeMode();
                           },
                         ),
 
@@ -142,8 +139,8 @@ class CarConnectScreen extends StatelessWidget {
                           icon: const Icon(Icons.language),
                           value: 'en',
                           items: const [
-                            DropdownMenuItem(value: 'en', child: Text("EN")),
-                            DropdownMenuItem(value: 'bn', child: Text("BN")),
+                            DropdownMenuItem(value: 'en', child: Text('EN')),
+                            DropdownMenuItem(value: 'bn', child: Text('BN')),
                           ],
                           onChanged: (value) {
                             // TODO: Implement language change logic
@@ -165,10 +162,13 @@ class CarConnectScreen extends StatelessWidget {
                 right: 20,
                 child: FloatingActionButton(
                   heroTag: 'locate',
-                  backgroundColor: Colors.white,
+                  backgroundColor: context.colors.backGroundColor,
                   onPressed: () =>
                       context.read<CarConnectCubit>().moveToCurrentLocation(),
-                  child: const Icon(Icons.my_location, color: Colors.blue),
+                  child: Icon(
+                    Icons.my_location,
+                    color: context.colors.primaryColor,
+                  ),
                 ),
               ),
 
@@ -178,9 +178,12 @@ class CarConnectScreen extends StatelessWidget {
                 right: 20,
                 child: FloatingActionButton.extended(
                   onPressed: () => context.read<CarConnectCubit>().clearRoute(),
-                  icon: const Icon(Icons.clear),
-                  label: const Text('Clear'),
-                  backgroundColor: Colors.redAccent,
+                  icon: Icon(
+                    Icons.clear,
+                    color: context.colors.iconColor,
+                  ),
+                  label: AppText.normal('Clear'),
+                  backgroundColor: context.colors.backGroundColor,
                 ),
               ),
             ],
