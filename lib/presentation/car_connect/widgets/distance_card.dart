@@ -77,12 +77,15 @@ class DistanceCard extends StatelessWidget {
               : state.duration;
 
           return BottomAppBar(
-            color: context.colors.cardColor,
-            elevation: 8,
+            color: context.colors.backGroundColor,
+            elevation: 12,
+
             child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: AppText.normalBold(
-                '${l10n.distance}: $distance | ${l10n.duration}: $duration',
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              child: FittedBox(
+                child: AppText.largeBold(
+                  '${l10n.distance}: $distance | ${l10n.duration}: $duration',
+                ),
               ),
             ),
           );
