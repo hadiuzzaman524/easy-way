@@ -49,5 +49,5 @@ dev_dependencies:
 flutter:
   generate: true
   uses-material-design: true
-
-# AIzaSyBz0UPCuugr7DW6qY0wuGnRQF-8DnE6f08
+  assets:
+    - assets/dark_map_style.json
