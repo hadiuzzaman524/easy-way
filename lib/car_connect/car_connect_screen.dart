@@ -1,13 +1,14 @@
 import 'dart:async';
-import 'package:easy_way/car_route/cubit/car_route_cubit.dart';
-import 'package:easy_way/car_route/cubit/car_route_state.dart';
-import 'package:easy_way/car_route/location_search_delegate.dart';
+import 'package:auto_route/annotations.dart';
+import 'package:easy_way/car_connect/cubit/car_route_cubit.dart';
+import 'package:easy_way/car_connect/cubit/car_route_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class CarRouteScreen extends StatelessWidget {
-  const CarRouteScreen({super.key});
+@RoutePage()
+class CarConnectScreen extends StatelessWidget {
+  const CarConnectScreen({super.key});
 
   static const CameraPosition _initialCameraPosition = CameraPosition(
     target: LatLng(23.8103, 90.4125),
