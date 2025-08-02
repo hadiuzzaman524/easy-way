@@ -2,5 +2,9 @@
     "@@locale": "en",
     "language": "Language",
     "languageMode": "ENG",
-    "appTitle": "Easy Way"
+    "appTitle": "Easy Way",
+    "clear": "Clear",
+    "distance": "Distance",
+    "duration": "Duration"
+
 }

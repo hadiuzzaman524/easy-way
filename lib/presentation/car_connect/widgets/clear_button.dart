@@ -1,4 +1,5 @@
 import 'package:easy_way/core/app_colors.dart';
+import 'package:easy_way/l10n/l10n.dart';
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart';
 import 'package:easy_way/presentation/widgets/app_text.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,8 @@ class ClearButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Positioned(
       bottom: 50,
       right: 20,
@@ -16,9 +19,9 @@ class ClearButton extends StatelessWidget {
         onPressed: () => context.read<CarConnectCubit>().clearRoute(),
         icon: Icon(
           Icons.clear,
-          color: context.colors.iconColor,
+          color: context.colors.buttonColor,
         ),
-        label: AppText.normal('Clear'),
+        label: AppText.largeBold(l10n.clear),
         backgroundColor: context.colors.backGroundColor,
       ),
     );

@@ -20,7 +20,7 @@ class AppThemeCubit extends Cubit<AppThemeState> {
         const AppThemeState(
           isDarkTheme: true,
           mapStyle: '[]',
-          isBangla: true,
+          isBangla: false,
         ),
       );
 
