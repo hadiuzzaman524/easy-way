@@ -1,5 +1,6 @@
-import 'package:easy_way/car_connect/cubit/car_route_cubit.dart';
+import 'package:easy_way/injector/injector.dart';
 import 'package:easy_way/l10n/l10n.dart';
+import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart';
 import 'package:easy_way/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,8 +12,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => CarRouteCubit(),
+    return BlocProvider<CarConnectCubit>(
+      create: (ctx) => injector(),
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(

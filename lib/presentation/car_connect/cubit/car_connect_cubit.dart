@@ -1,20 +1,22 @@
-import 'package:dio/dio.dart';
-import 'package:easy_way/car_connect/cubit/car_route_state.dart';
-import 'package:flutter/material.dart';
+import 'package:easy_way/domain/usecases/get_route_usecase.dart';
+import 'package:easy_way/presentation/car_connect/cubit/car_connect_state.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:injectable/injectable.dart';
 
-class CarRouteCubit extends Cubit<CarRouteState> {
-  CarRouteCubit() : super(const CarRouteState()) {
+@injectable
+class CarConnectCubit extends Cubit<CarConnectState> {
+  CarConnectCubit({required this.getRouteUseCase})
+    : super(const CarConnectState()) {
     fetchCurrentLocation();
   }
 
-  final Dio _dio = Dio();
+  final GetRouteUseCase getRouteUseCase;
+
   GoogleMapController? _mapController;
 
-  final String apiKey =
-      'AIzaSyB0b4TGm-toABe37pTnvaNis10BN4Ka4Jk'; // replace with your real key
   void selectPoint(LatLng position) async {
     if (state.origin != null && state.destination != null) {
       // Route complete; ignore taps until clear
@@ -22,7 +24,6 @@ class CarRouteCubit extends Cubit<CarRouteState> {
     }
 
     if (state.origin == null) {
-      // Set origin and remove current location marker
       final updatedMarkers = Set<Marker>.from(state.markers)
         ..removeWhere((m) => m.markerId.value == 'current_location');
       updatedMarkers.add(
@@ -42,7 +43,6 @@ class CarRouteCubit extends Cubit<CarRouteState> {
         ),
       );
     } else {
-      // Set destination and fetch route
       emit(
         state.copyWith(
           destination: position,
@@ -60,79 +60,27 @@ class CarRouteCubit extends Cubit<CarRouteState> {
   Future<void> _getRoute() async {
     if (state.origin == null || state.destination == null) return;
 
-    try {
-      final response = await _dio.get(
-        'https://maps.googleapis.com/maps/api/directions/json',
-        queryParameters: {
-          'origin': '${state.origin!.latitude},${state.origin!.longitude}',
-          'destination':
-              '${state.destination!.latitude},${state.destination!.longitude}',
-          'mode': 'driving',
-          'key': apiKey,
-        },
+    final routeInfo = await getRouteUseCase.execute(
+      state.origin!,
+      state.destination!,
+    );
+
+    if (routeInfo != null) {
+      emit(
+        state.copyWith(
+          polylines: routeInfo.polylines,
+          distance: routeInfo.distance,
+          duration: routeInfo.duration,
+          isLoading: false,
+        ),
       );
-
-      if (response.data['status'] == 'OK') {
-        final route = response.data['routes'][0];
-        final polyline = route['overview_polyline']['points'].toString();
-        final decoded = _decodePolyline(polyline);
-        final leg = route['legs'][0];
-
-        emit(
-          state.copyWith(
-            polylines: {
-              Polyline(
-                polylineId: const PolylineId('route'),
-                color: Colors.blue,
-                width: 5,
-                points: decoded,
-              ),
-            },
-            distance: leg['distance']['text'].toString(),
-            duration: leg['duration']['text'].toString(),
-            isLoading: false,
-          ),
-        );
-      } else {
-        emit(state.copyWith(isLoading: false));
-      }
-    } catch (e) {
+    } else {
       emit(state.copyWith(isLoading: false));
     }
   }
 
-  List<LatLng> _decodePolyline(String encoded) {
-    List<LatLng> points = [];
-    int index = 0, len = encoded.length;
-    int lat = 0, lng = 0;
-
-    while (index < len) {
-      int b, shift = 0, result = 0;
-      do {
-        b = encoded.codeUnitAt(index++) - 63;
-        result |= (b & 0x1f) << shift;
-        shift += 5;
-      } while (b >= 0x20);
-      int dlat = (result & 1) != 0 ? ~(result >> 1) : (result >> 1);
-      lat += dlat;
-
-      shift = 0;
-      result = 0;
-      do {
-        b = encoded.codeUnitAt(index++) - 63;
-        result |= (b & 0x1f) << shift;
-        shift += 5;
-      } while (b >= 0x20);
-      int dlng = (result & 1) != 0 ? ~(result >> 1) : (result >> 1);
-      lng += dlng;
-
-      points.add(LatLng(lat / 1e5, lng / 1e5));
-    }
-    return points;
-  }
-
   void clearRoute() {
-    emit(const CarRouteState());
+    emit(const CarConnectState());
   }
 
   Future<void> fetchCurrentLocation() async {
@@ -161,7 +109,6 @@ class CarRouteCubit extends Cubit<CarRouteState> {
       return;
     }
 
-    // If here, permission granted
     final position = await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.high,
     );

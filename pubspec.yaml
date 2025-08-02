@@ -26,8 +26,10 @@ dependencies:
   http: ^1.4.0
   injectable: ^2.5.1
   intl: ^0.20.2
+  json_serializable: ^6.9.5
   latlong2: ^0.9.1
   open_route_service: ^1.2.7
+  retrofit: ^4.7.0
 
 dev_dependencies:
   auto_route_generator: ^10.2.3
@@ -38,6 +40,7 @@ dev_dependencies:
 
   injectable_generator: ^2.7.0
   mocktail: ^1.0.4
+  retrofit_generator: ^9.7.0
   very_good_analysis: ^9.0.0
 
 

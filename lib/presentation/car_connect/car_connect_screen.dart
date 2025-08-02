@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:auto_route/annotations.dart';
-import 'package:easy_way/car_connect/cubit/car_route_cubit.dart';
-import 'package:easy_way/car_connect/cubit/car_route_state.dart';
+import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart';
+import 'package:easy_way/presentation/car_connect/cubit/car_connect_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -21,7 +21,7 @@ class CarConnectScreen extends StatelessWidget {
 
     return Scaffold(
       // The BottomAppBar is now used
-      bottomNavigationBar: BlocBuilder<CarRouteCubit, CarRouteState>(
+      bottomNavigationBar: BlocBuilder<CarConnectCubit, CarConnectState>(
         builder: (context, state) {
           if (state.distance != null && state.duration != null) {
             return BottomAppBar(
@@ -45,9 +45,9 @@ class CarConnectScreen extends StatelessWidget {
           }
         },
       ),
-      body: BlocBuilder<CarRouteCubit, CarRouteState>(
+      body: BlocBuilder<CarConnectCubit, CarConnectState>(
         builder: (context, state) {
-          final cubit = context.read<CarRouteCubit>();
+          final cubit = context.read<CarConnectCubit>();
 
           return Stack(
             children: [
@@ -162,7 +162,7 @@ class CarConnectScreen extends StatelessWidget {
                   heroTag: 'locate',
                   backgroundColor: Colors.white,
                   onPressed: () =>
-                      context.read<CarRouteCubit>().moveToCurrentLocation(),
+                      context.read<CarConnectCubit>().moveToCurrentLocation(),
                   child: const Icon(Icons.my_location, color: Colors.blue),
                 ),
               ),
@@ -172,7 +172,7 @@ class CarConnectScreen extends StatelessWidget {
                 bottom: 50,
                 right: 20,
                 child: FloatingActionButton.extended(
-                  onPressed: () => context.read<CarRouteCubit>().clearRoute(),
+                  onPressed: () => context.read<CarConnectCubit>().clearRoute(),
                   icon: const Icon(Icons.clear),
                   label: const Text("Clear"),
                   backgroundColor: Colors.redAccent,
