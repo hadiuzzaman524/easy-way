@@ -15,6 +15,7 @@ class CarRouteCubit extends Cubit<CarRouteState> {
 
   final String apiKey =
       'AIzaSyB0b4TGm-toABe37pTnvaNis10BN4Ka4Jk'; // replace with your real key
+
   void selectPoint(LatLng position) async {
     if (state.origin != null && state.destination != null) {
       // Route complete; ignore taps until clear
@@ -25,28 +26,34 @@ class CarRouteCubit extends Cubit<CarRouteState> {
       // Set origin and remove current location marker
       final updatedMarkers = Set<Marker>.from(state.markers)
         ..removeWhere((m) => m.markerId.value == 'current_location');
-      updatedMarkers.add(Marker(markerId: const MarkerId('origin'), position: position));
+      updatedMarkers.add(
+        Marker(markerId: const MarkerId('origin'), position: position),
+      );
 
-      emit(state.copyWith(
-        origin: position,
-        destination: null,
-        markers: updatedMarkers,
-        distance: null,
-        duration: null,
-        polylines: {},
-        isLoading: false,
-        showCurrentLocationMarker: false,
-      ));
+      emit(
+        state.copyWith(
+          origin: position,
+          destination: null,
+          markers: updatedMarkers,
+          distance: null,
+          duration: null,
+          polylines: {},
+          isLoading: false,
+          showCurrentLocationMarker: false,
+        ),
+      );
     } else {
       // Set destination and fetch route
-      emit(state.copyWith(
-        destination: position,
-        markers: {
-          ...state.markers,
-          Marker(markerId: const MarkerId('destination'), position: position),
-        },
-        isLoading: true,
-      ));
+      emit(
+        state.copyWith(
+          destination: position,
+          markers: {
+            ...state.markers,
+            Marker(markerId: const MarkerId('destination'), position: position),
+          },
+          isLoading: true,
+        ),
+      );
       await _getRoute();
     }
   }
@@ -156,36 +163,45 @@ class CarRouteCubit extends Cubit<CarRouteState> {
     }
 
     // If here, permission granted
-    final position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    final position = await Geolocator.getCurrentPosition(
+      desiredAccuracy: LocationAccuracy.high,
+    );
     final currentLatLng = LatLng(position.latitude, position.longitude);
 
     if (state.origin == null) {
       final updatedMarkers = Set<Marker>.from(state.markers)
         ..removeWhere((m) => m.markerId.value == 'current_location');
-      updatedMarkers.add(Marker(
-        markerId: const MarkerId('current_location'),
-        position: currentLatLng,
-        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
-        infoWindow: const InfoWindow(title: 'Current Location'),
-      ));
+      updatedMarkers.add(
+        Marker(
+          markerId: const MarkerId('current_location'),
+          position: currentLatLng,
+          icon: BitmapDescriptor.defaultMarkerWithHue(
+            BitmapDescriptor.hueAzure,
+          ),
+          infoWindow: const InfoWindow(title: 'Current Location'),
+        ),
+      );
 
-      emit(state.copyWith(
-        currentLocation: currentLatLng,
-        markers: updatedMarkers,
-        showCurrentLocationMarker: true,
-      ));
+      emit(
+        state.copyWith(
+          currentLocation: currentLatLng,
+          markers: updatedMarkers,
+          showCurrentLocationMarker: true,
+        ),
+      );
     } else {
       final updatedMarkers = Set<Marker>.from(state.markers)
         ..removeWhere((m) => m.markerId.value == 'current_location');
 
-      emit(state.copyWith(
-        currentLocation: currentLatLng,
-        markers: updatedMarkers,
-        showCurrentLocationMarker: false,
-      ));
+      emit(
+        state.copyWith(
+          currentLocation: currentLatLng,
+          markers: updatedMarkers,
+          showCurrentLocationMarker: false,
+        ),
+      );
     }
   }
-
 
   Future<void> moveToCurrentLocation() async {
     if (state.currentLocation == null) {
