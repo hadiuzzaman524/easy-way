@@ -1,10 +1,10 @@
 import 'package:easy_way/domain/usecases/get_route_usecase.dart';
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_state.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:injectable/injectable.dart';
+import 'package:logger/logger.dart';
 
 @injectable
 class CarConnectCubit extends Cubit<CarConnectState> {
@@ -16,6 +16,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
   final GetRouteUseCase getRouteUseCase;
 
   GoogleMapController? _mapController;
+  final logger = Logger();
 
   Future<void> selectPoint(LatLng position) async {
     if (state.origin != null && state.destination != null) {
@@ -57,24 +58,26 @@ class CarConnectCubit extends Cubit<CarConnectState> {
   }
 
   Future<void> _getRoute() async {
-    if (state.origin == null || state.destination == null) return;
-
-    final routeInfo = await getRouteUseCase.execute(
-      state.origin!,
-      state.destination!,
-    );
-
-    if (routeInfo != null) {
-      emit(
-        state.copyWith(
-          polylines: routeInfo.polyline,
-          distance: routeInfo.distance,
-          duration: routeInfo.duration,
-          isLoading: false,
-        ),
+    try {
+      final routeInfo = await getRouteUseCase.execute(
+        state.origin!,
+        state.destination!,
       );
-    } else {
-      emit(state.copyWith(isLoading: false));
+
+      if (routeInfo != null) {
+        emit(
+          state.copyWith(
+            polylines: routeInfo.polyline,
+            distance: routeInfo.distance,
+            duration: routeInfo.duration,
+            isLoading: false,
+          ),
+        );
+      } else {
+        emit(state.copyWith(isLoading: false));
+      }
+    } catch (e) {
+      logger.e(e);
     }
   }
 
@@ -88,11 +91,11 @@ class CarConnectCubit extends Cubit<CarConnectState> {
 
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
-      debugPrint('Location services are disabled.');
+      logger.d('Location services are disabled.');
       final opened = await Geolocator.openLocationSettings();
       serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
-        debugPrint('User did not enable location services.');
+        logger.d('User did not enable location services.');
         return;
       }
     }
@@ -100,13 +103,13 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        debugPrint('Location permissions are denied.');
+        logger.d('Location permissions are denied.');
         return;
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
-      debugPrint('Location permissions are permanently denied.');
+      logger.d('Location permissions are permanently denied.');
       return;
     }
 

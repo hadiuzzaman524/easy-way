@@ -32,6 +32,7 @@ dependencies:
   intl: ^0.20.2
   json_serializable: ^6.9.5
   latlong2: ^0.9.1
+  logger: ^2.6.1
   open_route_service: ^1.2.7
   retrofit: ^4.7.0
 
