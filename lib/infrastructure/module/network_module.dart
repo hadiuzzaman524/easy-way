@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:easy_way/utils/app_constant.dart';
+import 'package:easy_way/core/app_constant.dart';
 import 'package:injectable/injectable.dart';
 
 @module

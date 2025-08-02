@@ -105,9 +105,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
       return;
     }
 
-    final position = await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.high,
-    );
+    final position = await Geolocator.getCurrentPosition();
     final currentLatLng = LatLng(position.latitude, position.longitude);
 
     if (state.origin == null) {

@@ -1,7 +1,8 @@
 import 'package:easy_way/injector/injector.dart';
 import 'package:easy_way/l10n/l10n.dart';
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart';
-import 'package:easy_way/routes/routes.dart';
+import 'package:easy_way/presentation/routes/routes.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
