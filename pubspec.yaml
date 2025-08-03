@@ -58,4 +58,5 @@ flutter:
   assets:
     - assets/json/dark_map_style.json
     - assets/json/light_map_style.json
+    - test/fixture/google_direction_response.json
     - assets/images/

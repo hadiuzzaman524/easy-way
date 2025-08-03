@@ -1,0 +1,641 @@
+{
+  "geocoded_waypoints": [
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJMd--SmTHVTcR43pQjrEUgcM",
+      "types": [
+        "establishment",
+        "lodging",
+        "point_of_interest"
+      ]
+    },
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJWdi7tfTZrDARbw_98_s3ZUg",
+      "types": [
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "bounds": {
+        "northeast": {
+          "lat": 23.8141938,
+          "lng": 91.78316359999999
+        },
+        "southwest": {
+          "lat": 22.3568784,
+          "lng": 90.39417309999999
+        }
+      },
+      "copyrights": "Powered by Google, ©2025 Google",
+      "legs": [
+        {
+          "distance": {
+            "text": "249 km",
+            "value": 249140
+          },
+          "duration": {
+            "text": "4 hours 51 mins",
+            "value": 17476
+          },
+          "end_address": "9Q4M+P7V, Chattogram, Bangladesh",
+          "end_location": {
+            "lat": 22.3568784,
+            "lng": 91.78316359999999
+          },
+          "start_address": "RC66+4XH, Dhaka 1212, Bangladesh",
+          "start_location": {
+            "lat": 23.8103735,
+            "lng": 90.4124956
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "58 m",
+                "value": 58
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 21
+              },
+              "end_location": {
+                "lat": 23.8104016,
+                "lng": 90.4130605
+              },
+              "html_instructions": "Head <b>east</b> on <b>Road No 11</b>",
+              "polyline": {
+                "points": "ymipCcuyfPEoB"
+              },
+              "start_location": {
+                "lat": 23.8103735,
+                "lng": 90.4124956
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.1 km",
+                "value": 136
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 59
+              },
+              "end_location": {
+                "lat": 23.8091926,
+                "lng": 90.41319899999999
+              },
+              "html_instructions": "Turn <b>right</b> at the 1st cross street toward <b>DOHS Bypass</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "_nipCsxyfPrACHAzAAJAFAHADCRI"
+              },
+              "start_location": {
+                "lat": 23.8104016,
+                "lng": 90.4130605
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.8 km",
+                "value": 766
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 130
+              },
+              "end_location": {
+                "lat": 23.8143884,
+                "lng": 90.40925879999999
+              },
+              "html_instructions": "Turn <b>right</b> onto <b>DOHS Bypass</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "mfipCoyyfPDZBF?F?BATCTAPAFCJCJKR_@d@y@r@m@\\u@ZMDK@YAm@BU@YDcAZGBCDCDa@dAGNKPk@j@YXSREBE@{C`@c@Jy@JG@CBUZ]\\c@X}AbA"
+              },
+              "start_location": {
+                "lat": 23.8091926,
+                "lng": 90.41319899999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.7 km",
+                "value": 675
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 82
+              },
+              "end_location": {
+                "lat": 23.8108015,
+                "lng": 90.4039799
+              },
+              "html_instructions": "Turn <b>left</b> to stay on <b>DOHS Bypass</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "}fjpC{`yfPf@dB?BHTHRFRLRLT@?NVX^`@f@NVDFLV@@N^d@fAh@rAJVHPTb@NVT^RZV\\z@hA^f@VXb@f@r@x@b@b@ZT@@LL"
+              },
+              "start_location": {
+                "lat": 23.8143884,
+                "lng": 90.40925879999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.7 km",
+                "value": 689
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 63
+              },
+              "end_location": {
+                "lat": 23.8047731,
+                "lng": 90.4027909
+              },
+              "html_instructions": "Merge onto <b>Tongi Diversion Rd</b>",
+              "maneuver": "merge",
+              "polyline": {
+                "points": "opipC{_xfPb@JbAPtBTjANhBRlCXlALvALRBFF@@@@?@?@AD`@DbBNlBLZBN@t@F`BNVB"
+              },
+              "start_location": {
+                "lat": 23.8108015,
+                "lng": 90.4039799
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "1.6 km",
+                "value": 1601
+              },
+              "duration": {
+                "text": "4 mins",
+                "value": 216
+              },
+              "end_location": {
+                "lat": 23.7905439,
+                "lng": 90.4004133
+              },
+              "html_instructions": "Continue onto <b>Dhaka - Mymensingh Hwy</b>",
+              "polyline": {
+                "points": "yjhpCmxwfPj@Dl@HdGj@lANrBRR@hCXlCXfAHB?rAJhBNL@`@D~@H\\DLBtALxANlBRvCVdAJ@?xBTR@jAL`AHJ@vAPb@D`@BdAHdAJb@Bb@DdAH`@Db@Dx@Fd@FP@xBRXB"
+              },
+              "start_location": {
+                "lat": 23.8047731,
+                "lng": 90.4027909
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "3.2 km",
+                "value": 3202
+              },
+              "duration": {
+                "text": "4 mins",
+                "value": 234
+              },
+              "end_location": {
+                "lat": 23.7624631,
+                "lng": 90.3949708
+              },
+              "html_instructions": "Turn <b>left</b> to merge onto <b>Dhaka Elevated Expy</b><div style=\"font-size:0.9em\">Toll road</div>",
+              "maneuver": "ramp-left",
+              "polyline": {
+                "points": "{qepCqiwfPHKPIREX?d@DXBn@F~BRD@ZB@?B?^Db@D@?dAHN@N@D@R@R@V@J@V@\\BD?XBH@NBPFTHRHHJFFBBRXJNNTBDPRTPRHFB\\JNFHH|CVrHr@xBR|ALb@DB?H@TBL@nBRvBNhFd@^DfAHH@H?xAP^Bn@D`AJp@Fl@D`AJ^BPBl@FpCVbAJF?hBPhAJ^B`@D|@HJ@b@BF@ZD`@Db@DVBpCVj@DRB^B^DTBD?RB\\BNB`@D|ALXDrD\\lBPt@PhC\\B@@?J@TDb@FF?|AT`ALpEr@`BXTB`ANlCZ^DB?^D@?b@BfAFpBN"
+              },
+              "start_location": {
+                "lat": 23.7905439,
+                "lng": 90.4004133
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "1.6 km",
+                "value": 1618
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 98
+              },
+              "end_location": {
+                "lat": 23.7528706,
+                "lng": 90.3995726
+              },
+              "html_instructions": "Take exit <b>Farmgate</b> toward <b>Farmgate</b>",
+              "maneuver": "ramp",
+              "polyline": {
+                "points": "kb`pCqgvfPVFVH~BP@?dAJ~@Hb@DJ@b@Dt@HN@`@DRBn@FB@R@fAFD@\\@b@BdAFr@DfADR@F?Z@x@Bb@@b@@b@BB?`A?N@v@?p@@d@@bA@f@?v@?p@E@?n@KnBi@n@]VQZS@At@s@RS\\e@T[PUBIPa@Pa@Nc@N[Jk@Jm@F_A?gA@[Iq@?EAE?AOq@KSQ_@AAS]U_@Wa@k@_AOa@CIAG?S"
+              },
+              "start_location": {
+                "lat": 23.7624631,
+                "lng": 90.3949708
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.1 km",
+                "value": 129
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 24
+              },
+              "end_location": {
+                "lat": 23.753581,
+                "lng": 90.4005655
+              },
+              "html_instructions": "Merge onto <b>Panthapath Tejgaon link Rd</b>",
+              "maneuver": "merge",
+              "polyline": {
+                "points": "mf~oCidwfPcAiBUa@OSQUQQ"
+              },
+              "start_location": {
+                "lat": 23.7528706,
+                "lng": 90.3995726
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "1.9 km",
+                "value": 1947
+              },
+              "duration": {
+                "text": "5 mins",
+                "value": 271
+              },
+              "end_location": {
+                "lat": 23.7376752,
+                "lng": 90.40530149999999
+              },
+              "html_instructions": "Sharp <b>right</b> onto <b>Moghbazar Rd</b>/<wbr/><b>Shaheed Tajuddin Ahmed Ave</b><div style=\"font-size:0.9em\">Continue to follow Moghbazar Rd</div>",
+              "maneuver": "turn-sharp-right",
+              "polyline": {
+                "points": "{j~oCqjwfPQ]\\QLM|BiA^ShDeBn@WVOXOXORKRK|@e@|Aw@TK^Q~@g@|@e@^Q|@e@JGFCPIHGTIFCn@QNCZExAI`CInAA`@?d@Cb@Ch@CF?bAI`@ETKXQVSZYX_@`@k@\\c@JMX]ZWXMf@Q\\Ip@Kd@E^G~@EB?X?V@R?hAH~@Fj@B\\Bd@@jAAbBAJ?t@JhAVb@B?@h@Bb@BvAF^FZB`@D\\N"
+              },
+              "start_location": {
+                "lat": 23.753581,
+                "lng": 90.4005655
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.5 km",
+                "value": 525
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 70
+              },
+              "end_location": {
+                "lat": 23.7337392,
+                "lng": 90.4037962
+              },
+              "html_instructions": "At the roundabout, take the <b>2nd</b> exit onto <b>Kakrail Rd</b>",
+              "maneuver": "roundabout-left",
+              "polyline": {
+                "points": "og{oCchxfP@??A@?@A@?@?@?@A@?@??@@?@?@?@@@?@@@@@@@@?@@@?@?@@??@?@?@?@?@?@?@?@A@?@A@?@A@R~@XbADL\\f@PHRHPDXHZDZDV@Z?j@Bn@@n@Bd@Cf@@l@@^?`ADl@@^@h@B"
+              },
+              "start_location": {
+                "lat": 23.7376752,
+                "lng": 90.40530149999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.4 km",
+                "value": 436
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 55
+              },
+              "end_location": {
+                "lat": 23.7300995,
+                "lng": 90.40514899999999
+              },
+              "html_instructions": "Continue onto <b>Moulana Bhasani Rd</b>",
+              "polyline": {
+                "points": "{nzoCw~wfPF?D?D?F?DAFADADAFCDAHGFEFEHIROFEXSXQPINIPITG\\Ij@MVEfBSf@G^EtAOB?V?PELELEJGDCDEDCDG"
+              },
+              "start_location": {
+                "lat": 23.7337392,
+                "lng": 90.4037962
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.2 km",
+                "value": 215
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 32
+              },
+              "end_location": {
+                "lat": 23.7285722,
+                "lng": 90.4042357
+              },
+              "html_instructions": "At the roundabout, take the <b>2nd</b> exit onto <b>Nat'l Eidgah St</b>",
+              "maneuver": "roundabout-left",
+              "polyline": {
+                "points": "cxyoCegxfPBGBGDCFEDADAD?DAB?D@D@B@B@BDBB@BJFPJTL@@RNPLXVJH`@`@@?^`@LLLH"
+              },
+              "start_location": {
+                "lat": 23.7300995,
+                "lng": 90.40514899999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.5 km",
+                "value": 499
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 76
+              },
+              "end_location": {
+                "lat": 23.724585,
+                "lng": 90.40533719999999
+              },
+              "html_instructions": "Continue onto <b>College Rd</b>",
+              "polyline": {
+                "points": "qnyoCoaxfPLHLFJDTDJ?b@CXAp@CB?XCZEB?n@I`@It@OB?b@GNCPAlAMpBU|@I^IRGFE@AHUBMBM@IBo@"
+              },
+              "start_location": {
+                "lat": 23.7285722,
+                "lng": 90.4042357
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.1 km",
+                "value": 145
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 47
+              },
+              "end_location": {
+                "lat": 23.7232883,
+                "lng": 90.4054902
+              },
+              "html_instructions": "Turn <b>right</b> toward <b>Fulbaria Rd</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "suxoCkhxfPNAb@Ah@Cb@CDAtAILATC"
+              },
+              "start_location": {
+                "lat": 23.724585,
+                "lng": 90.40533719999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.7 km",
+                "value": 723
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 99
+              },
+              "end_location": {
+                "lat": 23.723046,
+                "lng": 90.4125758
+              },
+              "html_instructions": "At the roundabout, take the <b>1st</b> exit onto <b>Fulbaria Rd</b>",
+              "maneuver": "roundabout-left",
+              "polyline": {
+                "points": "qmxoCiixfP?A?A@A?A?A@??A@??A?]@uA@mABcABuB?ABqBDoCDgB@g@@g@BmAD}B?U@c@BiD?UCcBAY"
+              },
+              "start_location": {
+                "lat": 23.7232883,
+                "lng": 90.4054902
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "81 m",
+                "value": 81
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 12
+              },
+              "end_location": {
+                "lat": 23.723105,
+                "lng": 90.413371
+              },
+              "html_instructions": "Continue onto <b>Dhaka - Sylhet Hwy</b>",
+              "polyline": {
+                "points": "alxoCsuyfPEyACcA"
+              },
+              "start_location": {
+                "lat": 23.723046,
+                "lng": 90.4125758
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "3.8 km",
+                "value": 3818
+              },
+              "duration": {
+                "text": "6 mins",
+                "value": 380
+              },
+              "end_location": {
+                "lat": 23.7056099,
+                "lng": 90.4443747
+              },
+              "html_instructions": "Exit on the <b>right</b> onto <b>Jatrabari Gulistan Flyover</b>/<wbr/><b>Mayor Mohammad Hanif Flyover</b><div style=\"font-size:0.9em\">Continue to follow Mayor Mohammad Hanif Flyover</div><div style=\"font-size:0.9em\">Toll road</div>",
+              "maneuver": "ramp-right",
+              "polyline": {
+                "points": "klxoCqzyfP@K@ODy@B[D_@BQ?EF]?AF_@@EFWH]H]Ni@FS@CL_@BILWFMRe@T]PS|@_BFOJOT_@R[@An@{@@AVYPS`@_@JKNMZWZYJKNK\\U?A\\S\\SHETK^Q^Q^Q`A_@h@WTIZMd@UXOb@UNKLG^S^QDAXOf@YTKNILKRQFGTWBCNUDGR_@Pa@@APs@Fe@BSBg@Be@Fe@?CDUBKBOFUBGJY@CP]PYNYf@_AXi@N_@J[L_@J_@Pm@Nk@V}@DQHWDKNa@@EL]R_@T_@DGDKLSLST_@T]T]DIb@w@P[T]T_@R[@AT_@T]T_@FILUR_@R_@R_@h@aAR_@DKLSR_@P[@CRa@b@y@BGNa@?ANi@Ps@HOFS?AJc@Ns@@K^qBHc@He@He@RkAPq@DWHe@He@@GF]Hc@DQDSF[@IJa@@APm@b@qAt@oB\\}@^eANa@`@eAPg@l@cBbAqC`@gA`@gAN[X_AV_ALe@n@gB\\_ABCPc@b@gAVk@n@qAh@cABGVi@HUHSBKHSDMFUBY@]HQNe@DMHc@"
+              },
+              "start_location": {
+                "lat": 23.723105,
+                "lng": 90.413371
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "6.3 km",
+                "value": 6311
+              },
+              "duration": {
+                "text": "9 mins",
+                "value": 541
+              },
+              "end_location": {
+                "lat": 23.6964821,
+                "lng": 90.50287499999999
+              },
+              "html_instructions": "Merge onto <b>Dhaka - Chittagong Hwy</b>/<wbr/><b>AH1</b>/<wbr/><b>N1</b>",
+              "maneuver": "merge",
+              "polyline": {
+                "points": "a_uoCi|_gPPe@`AqCx@wBj@yAp@gBvBiGX}@Na@FOJYfAyC~@iCBEJWvAoDf@mAh@wAXy@hAuCPc@hB}EJY`AgCj@}Ab@mAj@sAHQd@oABKj@wA~@oCz@yBnAgDbAqCP_@LWd@uAj@_B^_AZy@h@yAJWl@{Ap@gB`@gAb@kA`AkCN_@DKPe@Rg@HWPc@Pa@FOFOL_@HSRi@HWRk@DODIL[HQBIHc@h@gBLs@XgBFYRy@T}@ZqAZeAPq@Jm@Bc@Fm@J}BDeABgA?eEAmCCc@CcAEeAMqBKoBEs@m@oJMcCCa@?C[uEAUC[Gw@Ee@C]C]Eq@Ca@SiDU{DQoCGeAOoCAKEgACSIcBAU?ACe@m@qJUaEImASyB]wB]yBMaAC]KaB?eA?c@@yC?sAU{DEy@a@{GKsBCUOyC[eFIyAy@aN"
+              },
+              "start_location": {
+                "lat": 23.7056099,
+                "lng": 90.4443747
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "2.0 km",
+                "value": 1975
+              },
+              "duration": {
+                "text": "3 mins",
+                "value": 158
+              },
+              "end_location": {
+                "lat": 23.7049184,
+                "lng": 90.519335
+              },
+              "html_instructions": "Keep <b>right</b> to stay on <b>Dhaka - Chittagong Hwy</b>/<wbr/><b>AH1</b>/<wbr/><b>N1</b>",
+              "maneuver": "keep-right",
+              "polyline": {
+                "points": "_fsoC}ikgPUuDOwCG{@WaEC}@EcAC[CQEYSaAgAaEi@iB[iAK[m@qB?Ao@uB_@qAa@mA[{@c@cA_@y@EMOY[k@m@}@i@u@]c@c@m@[c@c@k@cAwAOSWWsBqCa@k@_@i@[a@MSSSGKY[k@q@U]W]GIe@q@W]EEQUEGQUMS_@g@W[W]W]g@q@QQOQmB{B"
+              },
+              "start_location": {
+                "lat": 23.6964821,
+                "lng": 90.50287499999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "81.4 km",
+                "value": 81400
+              },
+              "duration": {
+                "text": "1 hour 33 mins",
+                "value": 5609
+              },
+              "end_location": {
+                "lat": 23.4229925,
+                "lng": 91.16418689999999
+              },
+              "html_instructions": "Slight <b>right</b> onto <b>Dhaka - Chittagong Hwy</b><div style=\"font-size:0.9em\">Toll road</div>",
+              "maneuver": "turn-slight-right",
+              "polyline": {
+                "points": "wztoC{pngPCQCGGIIM_@m@_@s@CCOc@Oc@[gAI_@EYEWAMAQC[C[?c@?k@DcAFy@N}@Ru@Ts@h@gA@ET_@PWRYVa@V]PULQP[Z]^e@|AuBfA{AT[v@cAFIrDcFFIrCyDnCsDHKFKZa@HK~B_DfAyAnA_B\\c@b@m@\\c@^i@NUT[n@{@fAyA~CmE`AsA|AsBfAwAXc@xAmBFKnBeCr@aAx@cApAcBd@q@R[LW`@{@Vq@Ne@ZqATiAJi@h@iCTsAp@}CLk@R{@bAeF^mB\\eBH[Nc@Vo@Vi@PUNOr@w@x@}@X]jAmAv@s@FEz@w@nAkA\\YnJsIVUrBiBNMDCDEJIHGDEHIp@k@x@w@VUn@m@j@g@f@e@FGl@g@nAy@l@[lH_DzB_A|BaA~Aq@lB{@bBu@nAi@TK`Aa@rDaBpB{@\\OlAi@lAi@`@QPGx@_@tCoA@?^O|As@p@YfAg@pBy@n@W^Qx@[|@_@z@]h@SNGVKRIPKdAc@hAg@NGrD{Aj@W~B_AhAe@~B_AnDyAf@S~@a@hBw@`@Qn@WfAg@zBaAHClAk@VONIr@c@d@[VUj@g@r@w@h@o@T[l@aAh@aA^w@Ve@\\s@d@cA@Cz@cCV_A`@cAt@mBLURa@LQ\\i@`@q@\\i@Ra@`B{CRi@l@gAP[LWRUd@q@LQjAcBzAcCl@iADIp@qAd@u@b@{@\\u@`@s@LSR]\\g@p@cA~AaCd@y@Zs@p@sAPYb@{@j@mAdB}Dz@kBR_@vAuCVe@r@{Af@}@x@qA?Ar@mAp@wAbBmDlByDbAsBDIXi@vAoC^s@l@kAPYRa@R_@DIZo@HKDI\\i@RWPSJKLOr@m@f@[d@W|@a@ZOlCkAr@[|Am@nAk@lAk@^O`CeADCdDyABApCmAd@SxAq@n@Y`Ac@tAk@xGoC`@O^Qv@]FCt@YJE^OJE`Aa@JEh@SPIVQVOTSTS^]`@e@bC}CvDyE~ByCnBgCfCcDp@{@fBiCb@k@p@}@Za@T[Za@RUh@k@b@]lAy@v@c@d@U\\Sn@]h@Yr@_@XQRKxCcBhAm@^Sj@]FC~G{DbAi@n@]PKLEZS\\MJIHEHGLKVORKLEZQLGdB}@f@Y|@g@ZQnAs@`@WbAq@lBgAd@YZO\\MRKZMLIJGJGFEFGDEXQrAy@t@a@fAg@RK\\M`@OXMFCJEtD}A`Bq@nAo@pD{AbA_@`AQn@IxAGb@ArDOrAEVC`@CRCNAb@EBA|@Mj@K|@Yt@UpEiBPGPG`@M^KbAa@^O`@O^OZMfBs@^Ot@YbDoAn@Wn@Wl@SnDuAtGeCPIrDyAd@Q@?^Q~@a@^QtA{@x@s@~@gAHQP_@^y@v@qBvAqDhBsFl@}Aj@aB\\w@j@mAbAkBj@u@xAgBX[hAuAt@w@x@cAt@cAPSh@s@\\a@FIfAuA|AsB~@gAz@kANSTYf@m@HKhAgAp@o@b@a@nAkAp@m@t@s@`@]~AyAFEl@i@z@{@`@]Z[fG_GNMt@s@n@o@Z[bB{ANOjAgAHI@?NOr@s@r@u@lBgBXWlBcBdCaCZYx@w@DChAiAnAmAnAkAZ[t@s@FGNMf@c@lCgCtCmCxAyATWXYRUTURQ~@s@`@Wj@]h@WnCkA`A_@`DsAvAm@tAq@~Aw@pB_ALE\\QvB_Aj@W|As@z@a@DA|@c@rB_AbAg@b@QdAc@z@_@~BiAzBaAbJeE|As@ZO~DiBb@U\\Q@AJEPI@?z@_@p@_@`@Q^U`@UFETOf@c@JKHKn@w@n@{@NObBmBlAuAv@kAZ_@\\c@pA{A^a@^e@l@o@\\_@RUp@w@r@_AtAgBz@eAV[RYfDaEJOv@aAtBcCxAeB|@eAPQ\\a@`@i@LOV[hAwAn@w@V]@AX]|AoBtBcCbCwCv@{@~C}DtAcBp@y@fAqAvAeBlB}BV]z@eAbHqI`BoBX_@hB{BdAqAhAyAX_@xAgBZ_@BCz@gAp@{@bAqArAcB|CuDhBuBtA_BxDoEJMj@q@|BkCbAkAlC_DROZ_@vBeCDE|@cAf@k@bBiBlAyAfBqBX[b@i@vAaBlCuCX[BCLOb@e@`@e@XY|@gAxCmDPSx@_AJMJMnCaDxGyH|@aA~EwFX_@Xc@JQ@ADKHS@AHUd@uAJa@J[Ls@NaB@_AQkHEmAAUCwAK}CKuDCuA?KCaAAE?_@EwACeAA]Co@EoAGuBYqKEiBI{CGuBSwHOsGEsBMgFAi@AMIuDGuBAs@GsBGiBCcBCs@Eu@AKIwAGs@O{AQsBCOEiAEwA@qBCo@GeACe@Ca@GeBAMKkD?AEaACc@SqBe@aCk@_CS}@m@yB[gASs@w@iCISs@{BGQe@wAUs@a@}AMw@C[AS?Y@}@DgA?ML{ALa@VaAVq@^}@j@uAd@oATm@Pc@\\}@Zu@hBkEz@wBb@gAhAuCj@wAFOFMHSFSf@uAh@yADO@WbAkDb@yAbAuDl@wBFWF]Hc@Hq@Fs@B[Dc@B{@@}@DeC?eB?MAoAKsCKuBA[AIAOKyCASKgBGi@MyCCq@GwDA]Aw@Am@CsIAkBC{ECyF?EIcECw@GuBAe@_@wFK}BS{DCm@MuBCg@Em@QyEGgBA}@A]?c@@q@?kAAuC?cCAmB?aACyA?e@?mB?IAe@E{D?EA_AGwCCcAO}CASQmDG_A?CC_@Ae@AQE_AAGAeA?kA?oA?g@@gB?{A?gA@iFAYAyBCkCEyAImBK{CEsAO_ECi@GeDAaBEeBEkB?ACgAC}A?UCy@C}@?AEaDEaAEs@Eo@IgAC]Ee@Ca@c@gFIeAAUGu@SkCGg@KkA?EEs@Co@?o@?w@BeADq@@UBe@PaDBi@RqD@WLsBL}AFs@P_BBU^yBLy@Fc@NaA@EDc@Bo@?o@Aq@IaAIgAGcAIwAE{@?OE_B?{A?s@?iAB{D@o@@}C?]BeC@U@gCB_F?_@Ag@AgAC{BAe@CaAAqA?IA_AAMIsCAUAYI{AAWE_AMuAKcAUaCEg@Ee@Cc@SyBWeCK_AMiAKgAQsBYqCOqAAQ_@mD_AyIUcCCWGq@SaC]aE?AWoDGw@Ec@ASAOGg@]}CMu@QaAe@iC?CGWWuAY{Ac@}BeA{Fa@sBG[M{@ESCUC]C]C]CY?k@?C@g@@e@Ba@B[@CDYF_@XqA\\qAVeABMFWLc@`AaEHYl@cCJc@FS^cA`@w@N]l@u@p@u@DGv@{@x@_AhAoAhBoB~BiCVWzBsCzAiBf@q@~AoBnFeH~AuBT[fAwAvCyDrFkHnFcHx@kAPUdB{Bv@qA`@{@`@{@Ro@Po@V_AHc@b@aCb@aCd@mCBIb@aC@Mp@uDb@}B|@eFDSBQf@uC^qBRiARkAPcA@E^qBHe@RiAHe@Je@f@uCRkAHc@H_@f@mCBMFYBK^{ARu@DMzAgFFQLg@h@gBLe@ZgAZgAZgAZgAdEoNb@cBx@oCBMl@uBt@wBVq@l@wAXq@FK|AeDTe@Ra@P_@\\s@Zo@z@aBPa@R_@Pa@LWd@aAXi@P_@lAeCP_@Ra@R_@d@aAZq@f@aAd@aAR_@x@cB`B{C^q@`ByCb@w@j@cAn@sAhB}DDODG`AkCDK^iAtAcENe@^gAZcADKRm@Nk@Jk@BILw@De@D_@Ba@@_@?K?[?c@?MA{AC}BAi@AcAAg@A}ABcBF}CBuAFsCBqBBwALeEHmEDuBFkBD{D?O?mB@s@Ac@A}CCgACeACiASyHG_DGuBC}@Cw@Ac@IwBAUEcBImBE}@G}AGuBAUGmBCuAAi@AcBA{AAsADoABkADu@HsBB_AHcBL{AD}@B{@DaA?K@[?K@Y?iABcABi@Bw@D_BFuD@u@D_C@wADqBF{AFiAB[BYF_AXsBJs@PsA?APoAJw@Fe@@g@?e@?c@C]ASKiAOgAOoAKaAEq@Iu@ImACk@Ag@A{AA]?cA@eA?k@?}AA{A?oA@_C?uA?uA?m@?i@?oAByA@w@Bs@DgAFkANsBHeADk@@ULqAFo@Hg@NeAPqA\\oBL}@NgAXwATqAN{@RkARuAN{@Hi@XyA?AH_@?EDOZaBTuAXyB?CLs@TaBj@_Ed@wCPmAPwABOR{ALy@PeAPgA@KJs@Fo@Hm@\\oCVeBJs@JcAJ_ALcADg@BQZeCLiANaAReBJcAFc@Fm@JeANwAHcAF{@@UBg@@ELeB?GBe@B_A?C@c@ByA@Y@g@?ABc@@a@@ETwCPuBFs@Do@?QDaABqA@}@?C?}@CcA?}ADiBDcBB[D{AFkBDsAB_ADqA?QBi@Bk@Bm@Ba@Dk@@CDm@J}@?IHs@BQFk@@GHs@Lq@Jm@Fa@Fe@F_@@EBQ@MJs@LeA@EN{@Jm@DYL{@P_AFe@VgBNcARgA`@oC?CV_BJo@NaARuAFYZyBb@yCFg@Hi@VgBHk@L}@Ls@NiANcA@IHe@Jm@D]Js@TwA@MNkANaADUHo@L}@LaALw@NgAFc@@CL{@Js@Fa@H}@FcAD_AB_@Fs@De@Hi@BQF[Nu@Pw@Lo@He@x@_En@yCVqA`AqEPu@jA{FJe@ZaAv@eCZ}@No@XcAf@uBd@iBVeAzB_Jh@yBHYH_@Hk@Jc@`BaHb@aBfBaIZkAlA{ETaADSVaBNaAHw@LsBB_A?}A@{A?s@Ey@Ca@IyAs@kFu@gGIy@KaAAQEq@Gu@CmA?_@?g@BgAFeA@SRsAFc@ZsAtAaGz@kD~BmJHc@j@yBViATw@ZqApAoFHa@p@cCL_@Pm@\\gAJYn@iBPa@DOHSjBwFTi@hA}CNa@fCsGbAgCp@}ATk@fBoE`@aA`@y@h@_BVoAL_A@_@F_BCaBAIG}AGeBMiCGeCIgC?s@@_@Do@Ho@?ANaAHa@Jc@L_@FS^}@hB{DLYdA}Bl@aBDOJc@Jm@Ho@F{@@KBm@Bk@Au@C_AGuAKiBEi@Gm@q@cGe@}D?Ae@uDU_B[wCO_BKwAEkBAQC{ECyFE{GEwHC{C?QEwHA}@DqBRwBBUHg@Fe@DY@KTkB@ID]Hg@Fc@?EHo@VuBDw@BU?y@Ao@Ge@Au@Co@G}BAgC?iE@mDBc@@gB?wA@q@@S?qB@Y?i@?y@@sCBkD@gCFmBLcB?CBWJo@Ps@F]@EFSHSNa@Z}@v@yAfBuCrBkDLQNYj@}@^m@TYPWX]\\a@h@o@dAqAHMJMHOFMHOJUNc@HURy@F]Jq@Fw@B_AHkFBwA@iA?_@HmJ@a@BiBPeJ@{@BkAD{BD}B?K?oA?]Ao@Eq@Km@Mu@Oi@AG}@mC[}@Sq@Su@K[[qAg@iCe@_CIe@CQIs@Ei@?ACm@?UA]?oADi@Fo@Hm@PuAF]PeAn@oDDYJiAFq@F}@Bk@B_A@gBHsCFkC?a@DmBBuA@eACmAEcBEyAG{AAWEeBA[MgF?MAQGgEIgCEeB?MMoDIaBYgFCWQ{DYuDYwCQsBSuBO}B?CEe@IiAAWCWA]@_D@uB?{ADsD?w@?qAAu@Ce@Q{EAMCc@?OAMAQC_@KiB?k@@aBDsABg@D]Fe@BaA@Y?C@c@Ac@Cw@M}@Ee@AGSoBOiAS{AS}AOgAKy@YiCy@kGGe@Gm@Eg@Ee@Ai@@u@Bg@J{@BKF_@H]H_@Je@Nu@Ny@n@uCNq@v@_DBKNm@TcAz@gCj@_CF[Py@Pi@Ne@\\{@n@mAPWXa@j@{@^m@d@o@@APMVONM\\Qh@Yd@Ux@[z@W|@QdAU`AWfH{Ar@MzBi@d@IfEw@dAWf@IfCk@b@I|@SxA]rA[~A]jA[TEhDs@j@MdCi@pDy@hCa@fBa@pFkAzMsCjAUdBi@RGHCbBk@`@Mj@QvCiAjAc@r@YpDuAvCoA~@a@j@Un@Uf@QrEeB`Bq@fCcA`C}@nAe@`C_A`DoAvCiAr@WtBw@`@MNE`AYTK~Bu@pAa@HEpAa@|Bw@`Cw@lDiArIwCjEuAzFgBdF}AfBm@dBi@ZI\\K`A[fA]NG^KdDeAbBk@rAc@BAdF_BjA]FClBa@|Bg@^IfAW~A[jA[rBe@^GlCs@FCz@UNG`Bu@\\QhAgARMNO\\_@j@s@@?^k@^q@FMNWDGPa@Pa@Pc@Pa@Pa@BGLYNa@Pc@d@uALWTi@|AiEVs@rAmDfAuCJ]La@@APm@`AuCL]"
+              },
+              "start_location": {
+                "lat": 23.7049184,
+                "lng": 90.519335
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "142 km",
+                "value": 141504
+              },
+              "duration": {
+                "text": "2 hours 30 mins",
+                "value": 9023
+              },
+              "end_location": {
+                "lat": 22.3627797,
+                "lng": 91.78198239999999
+              },
+              "html_instructions": "Continue straight onto <b>Dhaka - Chittagong Hwy</b>/<wbr/><b>N1</b><div style=\"font-size:0.9em\">Pass by the gas station (on the left in 27.4 km)</div>",
+              "maneuver": "straight",
+              "polyline": {
+                "points": "ux}mCeolkP\\}@FQDMd@qARg@\\}@Pg@Pg@Tm@hA}Cl@aBJUJWbAmCJYTk@FQBGJYVo@Xu@Vq@Vs@JUBKDKf@qAf@sA~@eCh@wAJ[Z_AFSHOJUHUP_@Ti@P_@N_@l@qAVi@v@gB`AgB|@}Bh@oAXo@HO^_ATk@lBuDf@iArDqI`AuBn@wA^_A\\}@l@gB`@{AXiARaALw@JqAJ{@Dk@Dk@LmBP}CF{@hAeQj@_HN{BJqBJqBRcDLqCP{CHoA`@{GNuBTqDHiABQ?M@C?CB]?CBYDiATeDDo@NqCFq@De@NeCHwAFq@NwBL{ABW?K@]@U@WHcAP{C\\mE\\yFJuANkA^_CDUZsAz@sC\\{@n@uAv@wAT_@|@sAp@y@^c@^a@~AcB`CeCz@aAj@m@zAeBbBeBh@m@rCwC~@eAFGn@o@TWpEyEzCcDxBeC~@_A|DgEvD_EHIrAwAnBuBhAmArAqA^[xAsAl@e@JIRQd@]lA}@zAkAjA_AfDiCPMxC}BjA}@hBwAz@m@rB_BlDmCtAeA`E_DpCsBROvEuDx@o@v@o@ZWdCqBdEgDFEFEvGoFxBaBt@k@`BoAJMvAcAbBkAx@i@xAkAt@k@zHgGf@YrAw@f@]x@g@\\UBCXOxA}@zAaAjAu@~H_FrD}BlBkAhBkAtD}BlHsEtFkDjJ}FfEmCdAq@vA}@VM~@e@^Wr@_@hIaE|DkBtDgBdAi@rE}B~@e@t@_@~@e@l@WnAk@fAa@h@Sj@SrAk@BA^OPGl@YlAi@p@]XQl@]p@a@b@YhAw@XS~@w@bA}@|BmB|@o@p@g@`CcBjBiATODCVO\\U\\SlCcBbC{AxA}@`@YnA{@~EmDnDkCnA{@z@k@`@WpAu@NIjAm@bB{@BCbDcBtAu@`@Yx@m@x@o@fB}Af@c@ZYhC}Bb@c@xCkC`A{@tDgDrCgCfAcAjAcArAgANKZYZW~BqBdBiB\\[VWzBkBxCeCxAcAvCuBrA{@xBwA|A_An@_@pFyCfEgCtDwBrAs@zDgC`HmFj@e@~CyBp@e@FGpCeBh@[dAm@xBiAnC}AnBeAzAq@RKdDuAf@S~CgAfA[tCw@~Bm@fB_@@ALCPENGp@O`Cm@jAYfEcAt@OnB[lCi@hCg@HAfAO`AQtBc@~@Q\\Kd@OtAc@nAi@hCmABAzAs@ZStB{@~BgAhEoBTKl@Y|EwBLEhA_@j@Q|@UtA[t@KvAQpNaCbEm@jAOFAbAKlIk@rAKh@Ib@G|@QrAYdBa@n@MvBg@zCw@fEaArBe@p@MxBi@fBa@`B_@DA`A[~@YbBk@t@WJC`@O`@M^M`A[lAg@v@_@XQXSNM\\WVSZ[~@gAl@{@bCyDzBiD`AmATYROjA_An@_@XQXOx@]~BcA~@_@`@OzAo@p@[`Bq@XMh@WbAa@fEcBbGiCj@UpAk@b@Qv@]xAk@fA[ZGTG^K~Bg@nA]PEtAUhA]vAe@dAc@jCmAnB{@bEmBt@]RIXM`@Mz@MVEfBOpBObCSdGe@rFc@nBOXCB?jDY~AOb@EJ?pDWbCSt@E~@GnCMr@C`BIh@A|CG~ACrAEx@C`BSl@OdHiBtCs@t@UhA_@fC{@pAe@d@OZKjAc@pC_AhA_@FAvF{ArBk@RG~Cw@pBi@FA`D{@|@UDAVI`A[j@Qv@UfBc@|@UlAWtAS`AOl@EfAIjAED?~ADfA?fC@nCCnB?R?B?jC@Z?f@?hDCdAAtCAfA?hCEn@Cj@Cx@CNALAl@Ej@CZEH??AVCJAZCjAMVENA^G@?z@MHAfAO`@Gb@EzCc@zB[rAQb@CB?fACfACjBAR?dB?d@?~BDbDBJ?dB?nABN?`B@H?nA@~@C`@AZCd@Gn@IzAQlCa@hDk@~Cs@rA[rA]|Cw@`Ba@|@UnAMv@CjAA`BKrGo@xTyBVC`@GXCFARCF?PCHAD?b@E\\ClAEFARAhAE`AEr@Ed@EbDWhBSnCYd@EhCYfAO`@El@E~AOLAhBSTCzC[@?nDU`@C@AnAKt@ElCMb@CDA`AGTALCj@G|@Mv@ILCpDc@`@GXCvC[`COb@ChAG`@Cb@CfAGB?r@Ih@Gh@IbBYDAz@STGpA_@TIf@Qx@[tBu@TKzCeAtAg@RG\\Kj@OZEJCt@Q~AIfACn@@z@D~@JLBL@~@PnCp@LBzA^~@PVBbALbAHVBJ@d@@dABB?^A|ACpAG\\CJAp@GpBKbAElAED?lAEnBCvCCH?~AArA?z@Ab@A`AAdBCJAF?rDIZA~@CvAG@?J?jFKZA`AAjBCvBEh@@|CEfA?rCCzCCzBE`CCb@AxBIxFIb@?bBCNA~@AnCGrDG|@Cv@CPAZCVEXEb@Ib@Kr@SJCbF_Bl@Q^MvBo@NErFgB^IlA]|Ac@LExA]fE_AvCq@dAUZIb@MNGFCVIZMVKdBaAZStCaB@Ar@_@f@UtAe@b@KFCn@KDAl@IXCv@El@ArD?~GDb@?zC@`BBrA@zBFnDPnAFJ@rF^~AF~@?f@CfAKrBUd@G`BSdFq@x@KB?hBW`@Gb@Et@KtAQfDa@j@I`@GtAQbAQ~@Sn@Qz@YLEbA[fEuAbBi@r@Up@UbC{@bBk@bA[`@O`Bi@tAc@lFaBpEyA`EqA|@YtAe@jA_@d@QvBs@|Ai@bBo@ZMTKxAo@zBcAZOj@[fAk@hAm@rC{ABAjCuAh@[nJcFFCrAu@|@g@`EuBfEsBrG}CbD}AdFaCNGv@a@vI}DtDeBHCfGmCZMfDyA~BcAbAc@hDyAdGkCnAi@fAe@`FwBnBy@|JkETKbDsAlB}@d@SbDwAPItOqHzFoC|DmBrAs@tCwApCuAhEwBlJwEb@Ux@c@dCoAVMnE{BrBeA|HyDx@e@pAm@dGyChAm@|C}AzC_B~@e@dAi@xAq@^M~@Yl@Ox@KxAMbAIb@Cf@ChBUNC\\Gj@Ij@O~Bm@jA[BApF{AlA]rBi@p@M^Gb@Gv@Gl@A`@?jABfCHzBBrCFhA?J?|@C`@CTAHAp@I|@Ov@Kh@I^InCc@jBYnF}@jEu@rFaAlJmBjAU~@ShCg@nAW\\G~Du@DAPEbCa@nBWnAOjAOn@GnDSjAEnAEd@?x@IdCGfAClAC|@C`CE~@CpAC`@?b@?r@AnA?|@Al@C`BExAEB?~AErBEzACx@Cz@AvBEvBEtBC@?b@AhAChBE~BGlAAlBA|ABJ?|@@hB@xQ`@~BD|ABdEDhGFB?\\@D?vA@rBAlAI^EJ?~@Op@Kr@QJCx@Uh@QpCeAFE`@WPMTO^Y\\SPMd@a@`AgAl@q@hAyALOV[jDgEp@y@RWX]z@gAZ_@NQf@o@pCgDhByBh@w@dKeMzD{ElA}A^g@bDcEHIzBsCr@y@V[NSLMHMX[V]V[V[X]V[xBmCX]V[n@y@XYHIBCBEDCbAmAbBqBvAcBv@aAbAuAh@}@p@gAFK`@q@^s@lBoD\\e@t@oAp@gAl@_A~@_BdB_DbBiCzAgCNYt@kApA}B^k@Ta@RYfFwI\\i@T_@|AiCLU~B}DpCyEhAiB~Rw\\|BqDf@}@jAgBnAgBjBeCf@o@n@y@fBiBhAgA`BeBhAiA|A}AXYbAeArAsAx@{@n@m@vCyCjCoCn@o@`AaA~@{@~AeB~@_AtAuAf@e@r@s@\\]bBgB`CaCtBuBx@w@FI|@}@|A_Bf@i@zDyDzC{CbD}C|BaCRQ`BaBTQzB{BRSfAiAn@o@PQ`AaATUz@y@XYj@k@|@y@h@k@`@a@j@i@pAqAdAeAVWhAiAzBaCj@u@RWh@q@pAkBP[zBsDbAeBf@{@vAaC~AqCnCgEfAiB|AyCjDeI|C{IxAcEhBmE\\y@nA_Cv@sAb@y@b@o@zAuBdBgCnCgEr@iAz@iALSj@w@b@o@^o@r@gAn@kAp@mAb@}@NWnAaDRo@Vq@Ts@j@oAp@_B`@{@x@aBv@wAp@cAVe@vCyE~@{A@Af@}@Ta@R]^s@xB{DvCeFlAuB^o@|AmCtAmCXk@r@_Bj@wAPc@~@}BBIbAiC^cA^cARc@d@kA\\}@Zw@p@eBVm@Ri@f@gA@Ed@iARc@Zu@Vo@r@}AXq@^_Ap@mBxAuDPe@Pg@Z_BRu@VoATsALgANuAH_ABcAB_BCeDCoACsAGsCGyBGaCGsAFmAC}@Ae@E{CAYAwAEwBAg@Ci@I}FWoMMmF?}@EyACoASeFGoAe@mF[oCSwA[kC?AGc@?Am@cF_@{CIq@Iy@IgAGs@Cy@K_F?mAFqD@w@DuBFqDBmAHiFBs@FoCDuC@a@BuB@eADuAHgFBiBFuE?S?QHqDBmABw@HwBBWD_@D]Jo@XyADQFWPi@BIFOVw@Ti@\\o@n@eAj@w@`AkAdB{AvBkBBAhA_Ap@m@f@e@^]XUb@Yx@m@TMFChAm@b@Sj@UNG`@ShH_Dh@[`Bq@vAm@lAe@\\O~As@`A_@zCoApAk@xAo@ZMfDwAlAk@\\Sn@[nAq@fHiE`@UnCcB`Am@XQjBiAl@]FE\\Sd@Wz@e@pCuAhAc@hAg@t@WjEaBz@YdFkB^QhEaBvFuB`Bo@HC|CkADAfAa@pAg@\\ORILE`Bo@r@YLEPILGbAa@pBy@rAk@XKbBq@~@_@bDoAFCLEf@SzD_BtCiAbBs@hBq@XKjAe@^Q^ODAZM`CaA`@O~@_@`@OhFuBtHyCn@W\\O`A_@`C_AxEkBnAi@zBaALE`DoAh@UzDyAnAg@fBs@XMJCTK^O`Bo@`Bq@|@Yl@UzBs@@?`Bi@dA[r@MzA_@h@MNCjEs@d@G~@Of@G^Ef@EzC[v@ItEa@D?lBS|@KlC]@?\\GZGd@MdBe@FCVGp@OtCu@NCzA]tAYrBg@b@KhCi@dAUz@QHCpBa@zA[hG}ATGrA[bAUh@Mv@UfB]jDo@lCi@`@I|@Qv@OrDo@rBg@hAW~Co@rGsAb@KtCo@xA]@?~Cw@|Bm@PEzI}BrKqCdCq@|Cy@zBo@lBe@pD}@dFsA`NiDxBi@PE^Il@O`BYDA^Gb@Ih@G^Gf@EfBSp@Gh@CD?j@CrHS~L_@vBGL?vEMb@AjBGfACzFOhBGB?nDKnEMxDK\\CJAx@GFAf@Eb@G`@G@?ZG^If@K@?d@MrBi@@A`@KbFsArD_AtL_DvCw@n@OVGNCVEFAVEp@GZC^C^AJAhCEdCCtBCjACrBEl@Ch@A~@Ez@Gn@GTAj@Gl@G|@Mv@KrB[rCa@rEo@nDg@|Cc@rEq@dDe@j@K|@QlAY`@IVId@Kn@SvAe@PGtBq@JEpBo@|Bu@bAYxA_@tA]rCq@rEgANE\\IpEeAjDy@h@MZGXG|@SXETE^GLAbHy@fD_@pAQ|HoAhCa@lCe@jEs@zCg@f@I\\GTGHC`@Kf@Q\\K\\M@?`@ORITKf@WJGhE}Bv@a@jAq@d@Wj@Y^Q\\Mf@Ql@O`@K\\GPC\\GZEXC\\EtAOlCWlBUZC^G`@GLCZEv@Ob@I`B[pA[LEt@QzCq@v@Qn@O~A_@FA\\IjBc@z@Sj@OjA[PEv@WTGnAe@~@_@|CgAhA]DCbBo@xB{@nCmAbB}@|@e@|BkAlCqAd@WFC`Ac@bFoBhBo@nG{BxB{@p@UtFwBbA_@XM~Am@nAg@`@OtAm@|CsAbDwAx@a@b@SpAk@lKyD`D}@rA]t@Q`@Kd@OJEh@Sh@Un@YTMvAs@n@]pBy@t@_@pAk@`@OdAa@pAc@tEyAlAa@bBm@h@Wz@_@pAu@n@]n@_@|@i@tD{BzA{@dAo@j@]jA{@jDeCdBoAr@i@p@g@bAu@nA}@v@m@b@]tB{Ab@[x@m@dCeBbBoAv@o@pB}Ax@u@xAoA`A}@jAeAj@i@tCmCvDeDlBeB@A~AwAb@]n@g@FEZYnC{BfA_Ar@i@tB_BlCkBJGnDeC\\UjAy@dBkA|BaBzAeAzB}Ah@e@~@i@nAw@rAw@dCiAf@SBA`@OhCiAv@[hBy@tAo@FCVM|@]BARKxAs@lCeAfAa@hCcAfAc@|C}@zE{AVIrCu@~@WzBm@t@StBi@xAc@jAYdCm@hAW\\G`BS`@E~B[LCnBa@|Dy@RGtE{@|EcA^I|Bk@hFqA~Aa@|GeBlBc@~D{@NEFAr@S\\ObA_@XO\\OhCsAj@[bB}@vBqA~@i@PGzBsA@AzA{@|@i@v@e@HE~BqAb@SfCgAvAs@zBgAh@YdBeApCaBVO|BkAhAo@jBgAdCiAhAo@bAe@~C}AjIwDbAg@VM|BaAnCqApDeBJElCuAn@[|BiANGfAg@pCsAtAu@~As@jCmAhCiA^Q@??A`@O`C_Ab@QpBy@v@[|Ao@hFqBvCiAbBm@pHwCnBu@`CaAnAg@RIfBu@vEuBtAk@|Am@rBs@vEyAdDeAt@S~@OvBm@dD_A|Bq@jDoA^Qv@[d@SlBw@vAi@|@]fAe@tAm@z@c@d@WfAo@hAo@bBy@VMx@YrAo@xAc@dAYlA[dB_@~Bu@xDiA~@[v@YlBo@HExEyA~Ae@jA]~@WrBk@DAjBi@tBk@fHgBLEzCw@zBk@`Cq@r@S~Bm@fAY\\K`@KbA[`A]`@OBAFCzD}AvD_BjFwBjCkAl@Yf@WDCd@WFC~EsChBgAvBiAdAm@bFqCjBiAlC}A|EmCjHaE`E}B~BsAx@a@hAi@z@]xEoBhBs@n@Ul@WdAc@FCv@[rAi@dBu@ZMRGzCoAfBw@nCkAdEmBlFeC|Au@xAq@VMDCrAo@n@Y~BkAlHgDhD}Ap@]tAo@lAo@tAs@dDcBjB}@rAk@x@_@r@Y^OzD_BfCcAlDsAVK~Aq@dAe@VOtAu@LI\\S\\SVQTMj@a@fCwAvAy@xBmAlEwBlB{@`CgA|BeAdCgA|@_@NIdA_@DA~Ae@fA[l@QrAa@~@YhAY|@YfA[x@Uf@OpCy@JC^M~@]@?fAc@@ABAFCt@g@lAm@LI`@U\\ShCiBt@q@jAeAvDsD`A_AbAaAlByAbAs@`Ag@|@c@@?l@YTKfCmAb@U~CuAvAq@b@QbCiAnAk@`Ac@jCkARI|Aq@b@SzCsAl@Wd@Sh@Yj@[r@a@x@o@x@g@n@a@zAcAdAs@RMtCiBd@WpAw@lBcA\\Q`BaAtA{@LG~@m@|@i@n@_@d@YbBaAzByArA{@dDuBrCeB\\SvBoA~@k@dC{A|@e@ZOx@_@@AZM@AtAm@HC\\QTMHC?A^OBAPIZQbAk@p@c@j@[xAs@FELE`@M\\MpBg@PE`Ba@vGiBrC{@v@U~@_@jAa@dA_@`A[XIdA_@d@O^MHCbDcAfDkAlDmAn@UrBs@`@OhC_AjDuAlAg@lCaAzCeAdA_@xBq@pFiBdGeBbBm@vAe@xAe@r@Q\\IjCu@PGhBg@rAa@~Aa@XInAWp@MtBc@vB_@hCc@lI_BVEpJoBv@Qb@KRE|A[`AS^IrCi@ZEDAZGxB_@VG|Bc@LC`Cg@NChB[bASlIuApAUpCc@tDo@fCa@xEw@`AQxA]|Ac@f@QPEf@QhAc@h@Sd@SfA_@r@]RIdCgA@ATKj@YTOp@[nBkApCeBFCdAk@xBiAn@WJERKx@c@x@g@\\Wl@i@b@_@TS^Wl@a@bAi@zAs@j@YNIbAe@VMh@W\\MdBo@l@UxAk@j@QVI|@Wn@Ur@U~@YlA]f@OpAa@ZI`A[r@StA_@bB[vBg@ZIdCs@hCw@hDsAz@]^MdBq@~Am@bAa@|@]bBo@fDqAx@[vAg@rAg@j@SDCbAa@~B_AlBw@nAg@pBw@xAi@fAa@dC{@vBu@rBq@|@]l@SxDsAbC{@^MZMt@Uv@[dA]dBi@hA[`AYdBg@`@MFCXInA_@HCHCPEPGtAa@~Bo@PGv@WdCw@pE}A~@e@TI^Oj@SzAg@DCFCbBg@n@SjA_@|CaA~Bm@fBi@tAe@DC`@MlAa@zDwATIPGPG^OxEeBVK`Bo@HCHE`A]`A_@t@Y|CmA@Al@UnAe@nCeAv@]nAi@x@]nDwAVMPGJE|B}@nAg@FCJClBq@hAe@pBk@v@URGrBk@rBo@XI\\MLG`Bo@h@Up@]nAs@\\Q^UdAq@f@YfAm@dDeBx@_@PIRKf@QZMp@Sb@K`@ULE^KJCPELCTGjAYt@M`AOJCfAMPAfCYLAr@GbAMvAQVChBO`BQb@E|BWDA\\EfAMvAO`BSXEhAMhBS`AOvB[|A[PChAUnAWr@UJCfCcAnAg@bBo@p@U~@_@BAn@Sf@Sj@Mh@M`@IJCJCpDw@lCw@p@Yn@WvAo@`EiBlA[lCi@jCi@XGXEb@IjCe@xGiA~A[dAUhA[pBu@rAg@n@Wr@WbC_AxCaALErBs@pAc@B?vAg@|@[nHuCxD{A~D_BdAa@HChDuADCrAo@|Ao@dAg@t@]`C_AtBq@`Cy@RG`Bi@lDgAr@Sf@OdGgBd@K`AUFCbBc@xAe@v@WdBm@LE^Ot@W`Bs@b@UjCiAz@]VIBAFA~Cy@REpB[xA]lAWtA]vA]zAa@z@Ql@KJC|@OvAU`@Ev@GB?^E|AY`@IHAPEz@OnA[p@QTAf@Qt@Wj@SLEpEwAlDcA|@YlEmAbBm@t@Wj@O\\Kp@U`Ac@TKvAm@d@QdBi@fA[lBi@PE`A]n@STGb@MzAa@f@QVIhAc@rAi@v@[bAe@p@]p@_@fAq@\\Wf@]|BwAf@[z@g@TQz@i@vBmAv@a@PMhAi@^SRMVQ`@[`@_@pBqBz@_AFGLM\\[bAcAXYt@s@vB}Bl@m@NOr@o@`@_@XYVQxA{@z@i@`B{@t@[zBeAFCtAg@RI|@_@bAc@b@UvAw@zE}Cn@a@nDaClCoBtBcAJG\\Qf@Yl@Wj@UBAtAk@j@Qr@SpAYjCc@r@IlAO|BYb@GbAOv@KtBYVEtAUzB]z@M~Ck@pB]^IrCg@~B_@l@IVEhEk@^GPC^GrCe@jCa@b@I`Ca@x@QnCi@vEy@p@KjGcA`@GvA[nAQtAQjBUZE|@Kv@KlC[LAtASFAtB_@|AWj@OfA]l@SfEcBn@U|Ak@d@Qt@WRIRIXIvBk@LErAa@fBg@x@Y`@O`A_@lC}Ab@Y\\U@?bDwBxAsAvAiAh@_@j@_@r@e@RMZSNIx@a@b@U`Ag@x@e@RMNINKRQXURQn@m@bAaAJMTWNUVc@Va@v@sAXe@Xc@TYl@{@JMNSPWx@aAR[b@k@NORSl@i@h@a@fBiAfAq@hAw@l@g@p@w@zB{CpC{Dt@cAj@s@`@c@HIp@o@NOZYFEVS`@a@n@i@RO^]t@k@x@g@zAaA~@q@LI`Ay@HIPMRQ~@u@Z[NQVYFIZa@\\g@d@}@NOFGPQVSFEf@]PK|A{@zCuBDC@AbBgA@A|AeAZUZSt@k@dCkB@?~@u@VQRINGLG\\MhCo@|Bi@"
+              },
+              "start_location": {
+                "lat": 23.4229925,
+                "lng": 91.16418689999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.4 km",
+                "value": 396
+              },
+              "duration": {
+                "text": "2 mins",
+                "value": 95
+              },
+              "end_location": {
+                "lat": 22.3592339,
+                "lng": 91.7820584
+              },
+              "html_instructions": "Continue straight onto <b>Port Connecting Road</b>",
+              "maneuver": "straight",
+              "polyline": {
+                "points": "kvngCkdeoPf@A`@?jBDrCFtABbA?R?^Ab@ATCVCZE~@M"
+              },
+              "start_location": {
+                "lat": 22.3627797,
+                "lng": 91.78198239999999
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0.3 km",
+                "value": 291
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 81
+              },
+              "end_location": {
+                "lat": 22.3568784,
+                "lng": 91.78316359999999
+              },
+              "html_instructions": "Continue onto <b>Port Connecting Rd</b>",
+              "polyline": {
+                "points": "e`ngC{deoPjAQLAb@GJARC^Ir@QPEHCNId@[\\Uf@]b@[JGZU"
+              },
+              "start_location": {
+                "lat": 22.3592339,
+                "lng": 91.7820584
+              },
+              "travel_mode": "DRIVING"
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": []
+        }
+      ],
+      "overview_polyline": {
+        "points": "ymipCcuyfPvEaCTbBqLxF_MnHwB`FZ`A~BhDdKhQhZ~G`~@zIjq@|EfPdEjmBrRxvAxK|MiL{AeOkDgH|HiHdRmJbTgBxMaIl`@bB^ZjAhEfP`A`VuExGFbIpC|P{BdHyCf@{m@lJkZvUoNlGuFvAuIvO_]jNc]jk@{dBl|@scClAyh@qDil@}LouByH}i@aPq[cYg_@sDwLpFkRlx@_gAzRm]nNse@|ZaYr^mTj~@m`@dh@iTzQaTr`@ku@`m@{jAn{@ob@rLeGtb@si@jm@u\\to@s[zY{Cz\\qM`WwJjJwIb[ml@lt@mu@zr@oo@|nA{j@jk@_n@dmCgaDnc@ug@fCiZcFapBmBib@{Kge@m@sJ|DuMtOu`@|Gu]uAmi@kDmjBmImzCtCgd@Ai[_BmiAwP{{AoCeWjHiZdd@mj@nd@_r@hU{nAnc@woAjd@edA~AmqAaAkwAlDa{@_@qcA|[ccC`Cux@bGuf@rMe}@pR}cA|T}~@jA}QsCyYlI}l@jO{h@jN_^xCmQZw]vHs^{F{aAlBaqAh@kd@xN}YxH}NnAcz@uHg^xAuWx@_g@aCos@wCsjAgDsv@bK_a@jPwMdjBka@`lByq@~rAsa@tXoo@dXct@|LsXrU_p@~LioBlEwk@vH{QvO_Qzo@er@jc@e^t}AalAh~ByqAvbAep@~^{U~g@wd@p`Aio@po@i[pf@mKjf@cR|{@oOxk@}MfT{KtOwR|M_Gbg@eR`d@aOtv@yFvo@oKdh@_Off@oDxn@}Bbc@{A|e@cEdsAkN`_AoIds@iLxX|Cj`@aAn{AaCl}@wVdL{EjTQl]jApVkBb]mFzs@qUbmBi}@nzCavAxs@qZt`@qIh^a@~|@ePlnA}Ely@Pra@yAvWaV`i@op@`h@}q@vwAy|BzqAirA`XyWrb@ul@||@qgBtp@_rA|N{_@lAwm@qBu_A}Fyq@pEswAtUwW~`@yQf~Act@ptCohA~aAkPrsB}d@vx@}Rbz@yCf^qBfj@cNrqAuMro@aQvu@gLhi@yPn|@cUrhBos@fc@aQfg@{[|mAsaA~g@qYxi@aRv_Bs`@p_Boy@paBur@z{Aai@r}Aeg@pkBg_A~xAkq@|eA{b@z_@}Ybc@}RjiAcq@dq@}WxaBej@p`Be[bh@cNvXmObXeNl]qJryAki@v`Cey@hy@w\\rx@iKjfA{Z`k@mPbt@gYtiAo\\~{@yUlw@e^~UwUlf@_Xfa@{Mpk@}IzuA}WnY{KlXqQji@_m@``@q^dX_RrH_DtRYzMgBfEsC"
+      },
+      "summary": "Dhaka - Chittagong Hwy and Dhaka - Chittagong Hwy/N1",
+      "warnings": [],
+      "waypoint_order": []
+    }
+  ],
+  "status": "OK"
+}

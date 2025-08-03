@@ -1,3 +1,4 @@
+import 'package:easy_way/data/data_sources/car_connect_remote_data_source.dart';
 import 'package:easy_way/data/data_sources/user_preferences_local_data_source.dart';
 import 'package:easy_way/domain/services/car_connect_services.dart';
 import 'package:easy_way/domain/services/user_preferences_service.dart';
@@ -21,5 +22,6 @@ import 'package:mockito/annotations.dart';
   SetThemeModeUseCase,
   GetLanguageUseCase,
   SetLanguageUseCase,
+  CarConnectRemoteDataSource,
 ])
 void main() {}
