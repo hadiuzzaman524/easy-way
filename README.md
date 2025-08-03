@@ -8,6 +8,10 @@
   </tr>
 </table>
 
+<p float="left">
+     <img src="/dict/android.png" width="170">
+     <img src="/dict/ios.png" width="170">
+</p>
 
 ## 🔧 Flavors & Running the App
 
