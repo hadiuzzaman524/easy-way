@@ -1,7 +1,7 @@
+import 'package:easy_way/core/app_constant.dart';
 import 'package:easy_way/data/data_sources/car_connect_remote_data_source.dart';
 import 'package:easy_way/domain/entities/route_info.dart';
 import 'package:easy_way/domain/services/car_connect_services.dart';
-import 'package:easy_way/core/app_constant.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:injectable/injectable.dart';
 

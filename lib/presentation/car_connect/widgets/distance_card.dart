@@ -7,9 +7,16 @@ import 'package:easy_way/presentation/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/// A bottom card widget that displays the route distance and duration.
+///
+/// It automatically localizes the values into Bangla if the user preference
+/// is set to Bangla, otherwise it displays them in English. The widget listens
+/// to [CarConnectCubit] for updated route data and rebuilds when the state changes.
 class DistanceCard extends StatelessWidget {
+  /// Creates a [DistanceCard].
   DistanceCard({super.key});
 
+  /// A map used to convert English numerals to Bangla numerals.
   final banglaNumbers = {
     '0': '০',
     '1': '১',
@@ -23,10 +30,16 @@ class DistanceCard extends StatelessWidget {
     '9': '৯',
   };
 
+  /// Converts English digits in a string to their Bangla counterparts.
+  ///
+  /// Example: `'123'` becomes `'১২৩'`.
   String toBanglaNumber(String input) {
     return input.split('').map((c) => banglaNumbers[c] ?? c).join();
   }
 
+  /// Converts a distance string (e.g., `'2.4 km'`) into Bangla format.
+  ///
+  /// Returns a formatted string such as `'২.৪ কি.মি.'` or `'১৫০ মিটার'`.
   String toBanglaDistance(String distance) {
     final lower = distance.toLowerCase();
     if (lower.contains('km')) {
@@ -39,6 +52,9 @@ class DistanceCard extends StatelessWidget {
     return toBanglaNumber(distance);
   }
 
+  /// Converts a duration string (e.g., `'1 hour 30 min'`) into Bangla format.
+  ///
+  /// Returns a string like `'১ ঘণ্টা ৩০ মিনিট'`.
   String toBanglaDuration(String duration) {
     final lower = duration.toLowerCase();
 
@@ -63,7 +79,7 @@ class DistanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     final isBangla = context.select(
-      (UserPreferencesCubit cubit) => cubit.state.isBangla,
+          (UserPreferencesCubit cubit) => cubit.state.isBangla,
     );
 
     return BlocBuilder<CarConnectCubit, CarConnectState>(
@@ -79,7 +95,6 @@ class DistanceCard extends StatelessWidget {
           return BottomAppBar(
             color: context.colors.backGroundColor,
             elevation: 12,
-
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               child: FittedBox(

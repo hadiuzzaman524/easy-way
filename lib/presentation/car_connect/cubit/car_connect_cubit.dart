@@ -6,18 +6,38 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 
+/// A [Cubit] responsible for managing state related to the Car Connect feature.
+///
+/// Handles:
+/// - Origin and destination point selection
+/// - Fetching and displaying route information
+/// - Managing map markers and polylines
+/// - Handling current location fetching and animation
 @injectable
 class CarConnectCubit extends Cubit<CarConnectState> {
+  /// Creates a [CarConnectCubit] with the required [GetRouteUseCase].
+  ///
+  /// Automatically fetches the user's current location upon initialization.
   CarConnectCubit({required this.getRouteUseCase})
-    : super(const CarConnectState()) {
+      : super(const CarConnectState()) {
     fetchCurrentLocation();
   }
 
+  /// Use case to fetch route data between two points.
   final GetRouteUseCase getRouteUseCase;
 
+  /// Internal reference to the active [GoogleMapController].
   GoogleMapController? _mapController;
+
+  /// Logger instance for debug output.
   final logger = Logger();
 
+  /// Handles selection of a point on the map.
+  ///
+  /// - The first selected point becomes the origin.
+  /// - The second selected point becomes the destination and triggers route fetching.
+  ///
+  /// Ignores additional taps once both points are selected.
   Future<void> selectPoint(LatLng position) async {
     if (state.origin != null && state.destination != null) {
       return;
@@ -57,6 +77,9 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     }
   }
 
+  /// Fetches route data between origin and destination points using [GetRouteUseCase].
+  ///
+  /// Updates state with polylines, distance, and duration on success.
   Future<void> _getRoute() async {
     try {
       final routeInfo = await getRouteUseCase.execute(
@@ -81,10 +104,15 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     }
   }
 
+  /// Clears all route-related state, resetting to the initial state.
   void clearRoute() {
     emit(const CarConnectState());
   }
 
+  /// Fetches the user's current geolocation and adds a corresponding marker.
+  ///
+  /// Handles location permission requests and service availability.
+  /// If origin is already selected, hides the current location marker.
   Future<void> fetchCurrentLocation() async {
     bool serviceEnabled;
     LocationPermission permission;
@@ -151,6 +179,10 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     }
   }
 
+
+  /// Moves the map camera to the user's current location.
+  ///
+  /// Fetches location if not already available.
   Future<void> moveToCurrentLocation() async {
     if (state.currentLocation == null) {
       await fetchCurrentLocation();
@@ -163,6 +195,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     }
   }
 
+  /// Sets the internal [GoogleMapController] to allow camera control.
   Future<void> setMapController(GoogleMapController controller) async {
     _mapController = controller;
   }

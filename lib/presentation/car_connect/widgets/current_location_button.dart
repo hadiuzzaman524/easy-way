@@ -3,7 +3,13 @@ import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/// A floating action button that centers the map on the user's current location.
+///
+/// Positioned at the bottom-right of the screen, this button triggers
+/// [CarConnectCubit.moveToCurrentLocation] when pressed, helping users
+/// quickly navigate back to their current position on the map.
 class CurrentLocationButton extends StatelessWidget {
+  /// Creates a [CurrentLocationButton].
   const CurrentLocationButton({super.key});
 
   @override

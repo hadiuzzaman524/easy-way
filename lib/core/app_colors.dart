@@ -5,8 +5,13 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'app_colors.freezed.dart';
 
+/// Represents a collection of colors used throughout the application.
+///
+/// Contains colors for primary elements, text, buttons, backgrounds, borders,
+/// cards, icons, and text variants for light and dark themes.
 @freezed
 abstract class AppColors with _$AppColors {
+  /// Creates an immutable [AppColors] instance.
   const factory AppColors({
     required Color primaryColor,
     required Color textColor,
@@ -20,9 +25,16 @@ abstract class AppColors with _$AppColors {
   }) = _AppColors;
 }
 
-/// This is an extension function, during the development time we can use
-/// color by using `context.colors.primaryColor` like this
+/// Extension on [BuildContext] to easily access theme-related colors.
+///
+/// Allows usage of `context.colors` to get the current [AppColors] instance
+/// based on the app's theme mode.
+///
+/// Provides:
+/// - [colors]: Current [AppColors] based on dark or light theme.
+/// - [isDarkMode]: Boolean indicating if dark theme is enabled.
 extension BuildContextExtension on BuildContext {
+  /// Returns the current [AppColors] instance based on theme mode.
   AppColors get colors {
     const lightThemeColor = AppColors(
       primaryColor: Colors.deepOrange,
@@ -49,6 +61,7 @@ extension BuildContextExtension on BuildContext {
     return isDarkMode ? darkThemeColor : lightThemeColor;
   }
 
+  /// Returns `true` if the current theme mode is dark.
   bool get isDarkMode {
     return watch<UserPreferencesCubit>().state.isDarkTheme;
   }

@@ -6,7 +6,18 @@ import 'package:easy_way/presentation/widgets/language_toggle_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/// A custom floating app bar displayed at the top of the Car Connect screen.
+///
+/// This app bar includes:
+/// - The app logo
+/// - The localized app title
+/// - A theme toggle button to switch between light and dark mode
+/// - A language toggle button for switching between languages (e.g., English and Bangla)
+///
+/// Positioned with padding and elevation, this bar overlays content
+/// while maintaining a consistent UI/UX on both light and dark themes.
 class FloatingAppBar extends StatelessWidget {
+  /// Creates a [FloatingAppBar].
   const FloatingAppBar({super.key});
 
   @override
@@ -31,12 +42,18 @@ class FloatingAppBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              // App logo
               Assets.images.easyway.image(
                 height: 45,
                 width: 45,
               ),
+
+              // Localized app title
               AppText.headline2(l10n.appTitle),
+
               const Spacer(),
+
+              // Theme toggle icon
               IconButton(
                 icon: Icon(
                   Theme.of(context).brightness == Brightness.dark
@@ -47,6 +64,8 @@ class FloatingAppBar extends StatelessWidget {
                   context.read<UserPreferencesCubit>().changeThemeMode();
                 },
               ),
+
+              // Language switcher
               const LanguageToggleButton(),
             ],
           ),

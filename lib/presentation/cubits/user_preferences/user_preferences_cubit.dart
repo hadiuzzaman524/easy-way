@@ -9,6 +9,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 
+
+/// A [Cubit] that manages user preferences such as theme mode and language.
+///
+/// This cubit handles:
+/// - Fetching and persisting the user's theme mode (dark/light).
+/// - Fetching and persisting the user's language preference (Bangla or English).
+/// - Loading appropriate Google Maps styles based on the theme.
 @injectable
 class UserPreferencesCubit extends Cubit<UserPreferencesState> {
   UserPreferencesCubit(
@@ -29,6 +36,10 @@ class UserPreferencesCubit extends Cubit<UserPreferencesState> {
   final GetLanguageUseCase _getLanguageUseCase;
   final SetLanguageUseCase _setLanguageUseCase;
 
+  /// Toggles the current theme mode between dark and light.
+  ///
+  /// Loads the corresponding map style JSON and emits a new state
+  /// with updated theme mode and map style.
   Future<void> changeThemeMode() async {
     late bool isDarkMode;
     try {
@@ -46,6 +57,10 @@ class UserPreferencesCubit extends Cubit<UserPreferencesState> {
     emit(state.copyWith(isDarkTheme: !isDarkMode, mapStyle: mapStyle));
   }
 
+  /// Retrieves the saved theme mode and language preferences.
+  ///
+  /// Loads the appropriate map style JSON based on the saved theme mode.
+  /// Emits a new state with the fetched preferences.
   Future<void> getThemeMode() async {
     try {
       final isDarkMode = await _getThemeModeUseCase.execute();
@@ -66,7 +81,11 @@ class UserPreferencesCubit extends Cubit<UserPreferencesState> {
       emit(state.copyWith(isDarkTheme: true));
     }
   }
-
+  /// Changes the language preference.
+  ///
+  /// Persists the selected language preference and updates the state.
+  ///
+  /// [isBangla] determines whether Bangla language is enabled (`true`) or not (`false`).
   Future<void> changeLanguage(bool isBangla) async {
     try {
       await _setLanguageUseCase.execute(isBangla: isBangla);

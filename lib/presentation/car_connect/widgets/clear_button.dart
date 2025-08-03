@@ -5,7 +5,13 @@ import 'package:easy_way/presentation/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/// A floating action button that clears the current route on the map.
+///
+/// Positioned at the bottom-right of the screen, this button triggers
+/// [CarConnectCubit.clearRoute] when pressed, allowing the user to
+/// reset or remove any selected routes from the map view.
 class ClearButton extends StatelessWidget {
+  /// Creates a [ClearButton].
   const ClearButton({super.key});
 
   @override

@@ -5,6 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+
+/// A toggle switch widget for switching app language between Bangla and English.
+///
+/// Uses [AdvancedSwitch] to provide a custom switch UI.
+/// Listens to [UserPreferencesCubit] to read and update the current language preference.
+///
+/// The switch label is localized and displays the current language mode.
+///
 class LanguageToggleButton extends StatefulWidget {
   const LanguageToggleButton({super.key});
 
