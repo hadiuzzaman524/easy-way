@@ -1,3 +1,4 @@
+import 'package:easy_way/core/app_colors.dart';
 import 'package:easy_way/gen/assets.gen.dart';
 import 'package:easy_way/l10n/l10n.dart';
 import 'package:easy_way/presentation/cubits/user_preferences/user_preferences_cubit.dart';
@@ -30,23 +31,15 @@ class FloatingAppBar extends StatelessWidget {
       right: 16,
       child: Card(
         elevation: 6,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-        color: Theme.of(context).cardColor.withOpacity(0.95),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        color: context.colors.backGroundColor,
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 12,
-            vertical: 8,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               // App logo
-              Assets.images.easyway.image(
-                height: 45,
-                width: 45,
-              ),
+              Assets.images.easyway.image(height: 45, width: 45),
 
               // Localized app title
               AppText.headline2(l10n.appTitle),

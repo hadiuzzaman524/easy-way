@@ -15,9 +15,7 @@ void main() {
   late MockUserPreferencesCubit userPreferencesCubit;
 
   setUpAll(() {
-    registerFallbackValue(
-      const CarConnectState(),
-    );
+    registerFallbackValue(const CarConnectState());
   });
 
   setUp(() {
@@ -28,9 +26,7 @@ void main() {
   testWidgets('renders GoogleMapView and verifies basic layout', (
     WidgetTester tester,
   ) async {
-    when(() => carConnectCubit.state).thenReturn(
-      const CarConnectState(),
-    );
+    when(() => carConnectCubit.state).thenReturn(const CarConnectState());
 
     when(() => userPreferencesCubit.state).thenReturn(
       const UserPreferencesState(

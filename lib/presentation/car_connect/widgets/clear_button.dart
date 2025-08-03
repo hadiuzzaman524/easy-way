@@ -23,10 +23,7 @@ class ClearButton extends StatelessWidget {
       right: 20,
       child: FloatingActionButton.extended(
         onPressed: () => context.read<CarConnectCubit>().clearRoute(),
-        icon: Icon(
-          Icons.clear,
-          color: context.colors.buttonColor,
-        ),
+        icon: Icon(Icons.clear, color: context.colors.buttonColor),
         label: AppText.largeBold(l10n.clear),
         backgroundColor: context.colors.backGroundColor,
       ),

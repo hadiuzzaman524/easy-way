@@ -36,7 +36,7 @@ class GoogleMapView extends StatelessWidget {
 
     // Retrieve custom map styling (e.g., dark/light) based on user preferences
     final mapStyle = context.select(
-          (UserPreferencesCubit cubit) => cubit.state.mapStyle,
+      (UserPreferencesCubit cubit) => cubit.state.mapStyle,
     );
 
     return BlocBuilder<CarConnectCubit, CarConnectState>(
@@ -51,10 +51,7 @@ class GoogleMapView extends StatelessWidget {
             // Animate to current location if available
             if (cubit.state.currentLocation != null) {
               await controller.animateCamera(
-                CameraUpdate.newLatLngZoom(
-                  cubit.state.currentLocation!,
-                  15,
-                ),
+                CameraUpdate.newLatLngZoom(cubit.state.currentLocation!, 15),
               );
             }
           },

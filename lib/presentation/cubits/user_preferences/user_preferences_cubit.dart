@@ -9,7 +9,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 
-
 /// A [Cubit] that manages user preferences such as theme mode and language.
 ///
 /// This cubit handles:
@@ -81,6 +80,7 @@ class UserPreferencesCubit extends Cubit<UserPreferencesState> {
       emit(state.copyWith(isDarkTheme: true));
     }
   }
+
   /// Changes the language preference.
   ///
   /// Persists the selected language preference and updates the state.

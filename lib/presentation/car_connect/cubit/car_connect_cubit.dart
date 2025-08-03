@@ -19,7 +19,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
   ///
   /// Automatically fetches the user's current location upon initialization.
   CarConnectCubit({required this.getRouteUseCase})
-      : super(const CarConnectState()) {
+    : super(const CarConnectState()) {
     fetchCurrentLocation();
   }
 
@@ -46,9 +46,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     if (state.origin == null) {
       final updatedMarkers = Set<Marker>.from(state.markers)
         ..removeWhere((m) => m.markerId.value == 'current_location')
-        ..add(
-          Marker(markerId: const MarkerId('origin'), position: position),
-        );
+        ..add(Marker(markerId: const MarkerId('origin'), position: position));
 
       emit(
         state.copyWith(
@@ -120,7 +118,7 @@ class CarConnectCubit extends Cubit<CarConnectState> {
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
       logger.d('Location services are disabled.');
-      final opened = await Geolocator.openLocationSettings();
+      await Geolocator.openLocationSettings();
       serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
         logger.d('User did not enable location services.');
@@ -178,7 +176,6 @@ class CarConnectCubit extends Cubit<CarConnectState> {
       );
     }
   }
-
 
   /// Moves the map camera to the user's current location.
   ///

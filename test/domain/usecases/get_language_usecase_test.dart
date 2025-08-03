@@ -14,8 +14,7 @@ void main() {
   });
 
   test('returns language from UserPreferences', () async {
-    when(mockUserPreferences.getLanguage())
-        .thenAnswer((_) async => true);
+    when(mockUserPreferences.getLanguage()).thenAnswer((_) async => true);
 
     final result = await useCase.execute();
 
@@ -24,8 +23,7 @@ void main() {
   });
 
   test('propagates exception from UserPreferences', () async {
-    when(mockUserPreferences.getLanguage())
-        .thenThrow(Exception('Failed'));
+    when(mockUserPreferences.getLanguage()).thenThrow(Exception('Failed'));
 
     expect(() => useCase.execute(), throwsException);
   });

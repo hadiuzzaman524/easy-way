@@ -22,10 +22,7 @@ void main() {
     const origin = LatLng(23.8103, 90.4125);
     const destination = LatLng(23.8223, 90.4265);
     const routeInfo = RouteInfo(
-      polyline: [
-        LatLng(23.8103, 90.4125),
-        LatLng(23.8223, 90.4265),
-      ],
+      polyline: [LatLng(23.8103, 90.4125), LatLng(23.8223, 90.4265)],
       distance: '2.5 km',
       duration: '10 min',
     );

@@ -72,10 +72,7 @@ void main() {
     });
 
     test('getRoute handles empty routes', () async {
-      const response = GoogleDirectionResponse(
-        status: 'OK',
-        routes: [],
-      );
+      const response = GoogleDirectionResponse(status: 'OK', routes: []);
 
       when(
         mockRemoteDataSource.getDirections(

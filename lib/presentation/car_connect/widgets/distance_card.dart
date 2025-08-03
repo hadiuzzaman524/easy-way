@@ -64,7 +64,7 @@ class DistanceCard extends StatelessWidget {
     final hourMatch = hourRegex.firstMatch(lower);
     final minMatch = minRegex.firstMatch(lower);
 
-    String result = '';
+    var result = '';
 
     if (hourMatch != null) {
       result += '${toBanglaNumber(hourMatch.group(1)!)} ঘণ্টা ';
@@ -79,7 +79,7 @@ class DistanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     final isBangla = context.select(
-          (UserPreferencesCubit cubit) => cubit.state.isBangla,
+      (UserPreferencesCubit cubit) => cubit.state.isBangla,
     );
 
     return BlocBuilder<CarConnectCubit, CarConnectState>(

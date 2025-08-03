@@ -14,12 +14,10 @@ void main() {
 
   late CarConnectCubit cubit;
   late MockGetRouteUseCase mockGetRouteUseCase;
-  late MockGoogleMapController mockMapController;
 
   setUp(() {
     MockGeolocator.mockLocationServices();
     mockGetRouteUseCase = MockGetRouteUseCase();
-    mockMapController = MockGoogleMapController();
     cubit = CarConnectCubit(getRouteUseCase: mockGetRouteUseCase);
   });
 

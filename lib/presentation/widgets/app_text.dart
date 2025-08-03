@@ -1,4 +1,3 @@
-
 import 'package:easy_way/core/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +11,7 @@ enum AppTextStyle {
   smallBold,
   headLine1,
   headLine2,
-  headLine3
+  headLine3,
 }
 
 /// is the custom text widget.
@@ -27,12 +26,12 @@ enum AppTextStyle {
 class AppText extends StatelessWidget {
   /// Factory constructor responsible for normal text
   factory AppText.normal(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.normal,
@@ -45,12 +44,12 @@ class AppText extends StatelessWidget {
 
   /// Factory constructor responsible for normal bold text
   factory AppText.normalBold(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.normalBold,
@@ -63,12 +62,12 @@ class AppText extends StatelessWidget {
 
   /// Factory constructor responsible for large text
   factory AppText.large(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.large,
@@ -81,12 +80,12 @@ class AppText extends StatelessWidget {
 
   /// Factory constructor responsible for large bold text
   factory AppText.largeBold(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.largeBold,
@@ -99,12 +98,12 @@ class AppText extends StatelessWidget {
 
   /// Factory constructor responsible for small text
   factory AppText.small(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.small,
@@ -117,12 +116,12 @@ class AppText extends StatelessWidget {
 
   /// Factory constructor responsible for small bold text
   factory AppText.smallBold(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.smallBold,
@@ -135,12 +134,12 @@ class AppText extends StatelessWidget {
 
   /// Factory constructor responsible for headLine1 text
   factory AppText.headline1(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.headLine1,
@@ -153,12 +152,12 @@ class AppText extends StatelessWidget {
 
   /// Factory constructor responsible for headLine1 text
   factory AppText.headline2(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.headLine2,
@@ -171,12 +170,12 @@ class AppText extends StatelessWidget {
 
   /// Factory constructor responsible for headLine3 text
   factory AppText.headline3(
-      String text, {
-        TextOverflow? textOverflow,
-        Color? color,
-        int? maxLine,
-        TextAlign? textAlign,
-      }) {
+    String text, {
+    TextOverflow? textOverflow,
+    Color? color,
+    int? maxLine,
+    TextAlign? textAlign,
+  }) {
     return AppText._(
       text,
       appTextStyle: AppTextStyle.headLine3,
@@ -188,13 +187,13 @@ class AppText extends StatelessWidget {
   }
 
   const AppText._(
-      this.text, {
-        required this.appTextStyle,
-        this.textOverflow,
-        this.maxLine,
-        this.textAlign,
-        this.color,
-      });
+    this.text, {
+    required this.appTextStyle,
+    this.textOverflow,
+    this.maxLine,
+    this.textAlign,
+    this.color,
+  });
 
   /// this variable holds the text
   final String text;
@@ -219,7 +218,7 @@ class AppText extends StatelessWidget {
     switch (appTextStyle) {
       case AppTextStyle.normal:
 
-      /// Normal text style
+        /// Normal text style
         return TextStyle(
           fontSize: 14,
           color: context.colors.textColor,
@@ -227,7 +226,7 @@ class AppText extends StatelessWidget {
         );
       case AppTextStyle.normalBold:
 
-      /// Normal bold text style
+        /// Normal bold text style
         return TextStyle(
           fontSize: 14,
           color: context.colors.textColor,
@@ -235,7 +234,7 @@ class AppText extends StatelessWidget {
         );
       case AppTextStyle.small:
 
-      /// Small text style
+        /// Small text style
         return TextStyle(
           fontSize: 13,
           color: context.colors.textColor,
@@ -243,7 +242,7 @@ class AppText extends StatelessWidget {
         );
       case AppTextStyle.smallBold:
 
-      /// Small bold text style
+        /// Small bold text style
         return TextStyle(
           fontSize: 13,
           color: context.colors.textColor,
@@ -252,7 +251,7 @@ class AppText extends StatelessWidget {
 
       case AppTextStyle.large:
 
-      /// large text style
+        /// large text style
         return TextStyle(
           fontSize: 15,
           color: context.colors.textColor,
@@ -260,7 +259,7 @@ class AppText extends StatelessWidget {
         );
       case AppTextStyle.largeBold:
 
-      /// Large bold text style
+        /// Large bold text style
         return TextStyle(
           fontSize: 15,
           color: context.colors.textColor,
@@ -269,14 +268,14 @@ class AppText extends StatelessWidget {
 
       case AppTextStyle.headLine1:
 
-      /// Headline1 text style
+        /// Headline1 text style
         return TextStyle(
           fontSize: 24,
           color: context.colors.textColor,
           fontWeight: FontWeight.bold,
         );
 
-    /// Headline2 text style
+      /// Headline2 text style
       case AppTextStyle.headLine2:
         return TextStyle(
           fontSize: 18,
@@ -284,7 +283,7 @@ class AppText extends StatelessWidget {
           fontWeight: FontWeight.bold,
         );
 
-    /// Headline3 text style
+      /// Headline3 text style
       case AppTextStyle.headLine3:
         return TextStyle(
           fontSize: 17,

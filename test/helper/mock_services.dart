@@ -26,8 +26,8 @@ class MockUserPreferencesCubit extends MockCubit<UserPreferencesState>
 
 class FakeLatLng extends Fake implements LatLng {}
 
-
 class FakeCarConnectState extends Fake implements CarConnectState {}
+
 class FakeUserPreferencesState extends Fake implements UserPreferencesState {}
 
 @GenerateMocks([

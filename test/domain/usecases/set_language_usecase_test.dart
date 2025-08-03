@@ -14,8 +14,9 @@ void main() {
 
   test('calls setLanguage on UserPreferences with correct value', () async {
     // Arrange
-    when(mockUserPreferences.setLanguage(isBangla: true))
-        .thenAnswer((_) async => Future.value());
+    when(
+      mockUserPreferences.setLanguage(isBangla: true),
+    ).thenAnswer((_) async => Future.value());
 
     // Act
     await useCase.execute(isBangla: true);
@@ -26,13 +27,11 @@ void main() {
 
   test('propagates exception from UserPreferences', () async {
     // Arrange
-    when(mockUserPreferences.setLanguage(isBangla: false))
-        .thenThrow(Exception('Failed'));
+    when(
+      mockUserPreferences.setLanguage(isBangla: false),
+    ).thenThrow(Exception('Failed'));
 
     // Act & Assert
-    expect(
-          () => useCase.execute(isBangla: false),
-      throwsException,
-    );
+    expect(() => useCase.execute(isBangla: false), throwsException);
   });
 }

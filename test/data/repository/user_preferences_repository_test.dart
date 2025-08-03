@@ -11,8 +11,9 @@ void main() {
   });
 
   test('setDarkMode calls with correct value', () async {
-    when(mockPrefs.setDarkMode(isDarkMode: true))
-        .thenAnswer((_) async => Future.value());
+    when(
+      mockPrefs.setDarkMode(isDarkMode: true),
+    ).thenAnswer((_) async => Future.value());
 
     await mockPrefs.setDarkMode(isDarkMode: true);
 
@@ -20,8 +21,7 @@ void main() {
   });
 
   test('getDarkMode returns correct value', () async {
-    when(mockPrefs.getDarkMode())
-        .thenAnswer((_) async => true);
+    when(mockPrefs.getDarkMode()).thenAnswer((_) async => true);
 
     final result = await mockPrefs.getDarkMode();
 
@@ -30,8 +30,9 @@ void main() {
   });
 
   test('setLanguage calls with correct value', () async {
-    when(mockPrefs.setLanguage(isBangla: false))
-        .thenAnswer((_) async => Future.value());
+    when(
+      mockPrefs.setLanguage(isBangla: false),
+    ).thenAnswer((_) async => Future.value());
 
     await mockPrefs.setLanguage(isBangla: false);
 
@@ -39,8 +40,7 @@ void main() {
   });
 
   test('getLanguage returns correct value', () async {
-    when(mockPrefs.getLanguage())
-        .thenAnswer((_) async => false);
+    when(mockPrefs.getLanguage()).thenAnswer((_) async => false);
 
     final result = await mockPrefs.getLanguage();
 

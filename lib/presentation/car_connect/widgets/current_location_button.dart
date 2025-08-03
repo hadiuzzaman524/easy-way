@@ -22,10 +22,7 @@ class CurrentLocationButton extends StatelessWidget {
         backgroundColor: context.colors.backGroundColor,
         onPressed: () =>
             context.read<CarConnectCubit>().moveToCurrentLocation(),
-        child: Icon(
-          Icons.my_location,
-          color: context.colors.primaryColor,
-        ),
+        child: Icon(Icons.my_location, color: context.colors.primaryColor),
       ),
     );
   }

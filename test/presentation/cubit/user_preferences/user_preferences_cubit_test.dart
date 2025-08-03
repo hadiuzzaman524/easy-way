@@ -26,22 +26,21 @@ void main() {
 
     // Mock both dark and light map styles
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-        .setMockMethodCallHandler(
-          const MethodChannel('flutter/assets'),
-          (MethodCall methodCall) async {
-            if (methodCall.arguments == 'assets/json/map_styles/dark.json') {
-              return ByteData.sublistView(
-                Uint8List.fromList(darkMapStyle.codeUnits),
-              );
-            }
-            if (methodCall.arguments == 'assets/json/map_styles/light.json') {
-              return ByteData.sublistView(
-                Uint8List.fromList(lightMapStyle.codeUnits),
-              );
-            }
-            return null;
-          },
-        );
+        .setMockMethodCallHandler(const MethodChannel('flutter/assets'), (
+          MethodCall methodCall,
+        ) async {
+          if (methodCall.arguments == 'assets/json/map_styles/dark.json') {
+            return ByteData.sublistView(
+              Uint8List.fromList(darkMapStyle.codeUnits),
+            );
+          }
+          if (methodCall.arguments == 'assets/json/map_styles/light.json') {
+            return ByteData.sublistView(
+              Uint8List.fromList(lightMapStyle.codeUnits),
+            );
+          }
+          return null;
+        });
 
     // Initialize cubit after setting up mocks
     cubit = UserPreferencesCubit(
@@ -73,7 +72,7 @@ void main() {
       build: () {
         when(
           mockSetLanguageUseCase.execute(isBangla: true),
-        ).thenAnswer((_) async => null);
+        ).thenAnswer((_) async {});
         return cubit;
       },
       act: (cubit) => cubit.changeLanguage(true),
@@ -88,6 +87,5 @@ void main() {
         verify(mockSetLanguageUseCase.execute(isBangla: true)).called(1);
       },
     );
-
   });
 }

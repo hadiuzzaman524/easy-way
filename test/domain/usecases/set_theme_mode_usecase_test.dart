@@ -33,9 +33,6 @@ void main() {
     ).thenThrow(Exception('Failed'));
 
     // Act & Assert
-    expect(
-      () => useCase.execute(isDarkMode: false),
-      throwsException,
-    );
+    expect(() => useCase.execute(isDarkMode: false), throwsException);
   });
 }

@@ -52,9 +52,7 @@ void main() {
                 value: userPreferencesCubit,
               ),
             ],
-            child: const Scaffold(
-              body: Stack(children: [ClearButton()]),
-            ),
+            child: const Scaffold(body: Stack(children: [ClearButton()])),
           ),
         ),
       );
