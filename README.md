@@ -85,6 +85,30 @@ final l10n = context.l10n;
 Text(l10n.helloWorld);
 ```
 
+---
+
+## 📄 Generate and View Documentation
+
+1. **Generate the documentation**
+   Run the following command in your project root:
+
+   ```bash
+   dart doc .
+   ```
+
+2. **Serve and view the documentation**
+   Use `dhttpd` to serve the generated docs:
+
+   ```bash
+   dart pub global activate dhttpd
+   dart pub global run dhttpd --path doc/api
+   ```
+
+3. **Open in browser**
+   After running the above command, open the link provided by `dhttpd` (typically: [http://localhost:8080](http://localhost:8080)) to view your documentation in the browser.
+
+---
+
 ## Additional Notes
 
 * Generate Android upload key:
