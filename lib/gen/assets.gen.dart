@@ -11,6 +11,13 @@
 
 import 'package:flutter/widgets.dart';
 
+class $TestGen {
+  const $TestGen();
+
+  /// Directory path: test/fixture
+  $TestFixtureGen get fixture => const $TestFixtureGen();
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -38,11 +45,23 @@ class $AssetsJsonGen {
   List<String> get values => [darkMapStyle, lightMapStyle];
 }
 
+class $TestFixtureGen {
+  const $TestFixtureGen();
+
+  /// File path: test/fixture/google_direction_response.json
+  String get googleDirectionResponse =>
+      'test/fixture/google_direction_response.json';
+
+  /// List of all assets
+  List<String> get values => [googleDirectionResponse];
+}
+
 class Assets {
   const Assets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsJsonGen json = $AssetsJsonGen();
+  static const $TestGen test = $TestGen();
 }
 
 class AssetGenImage {

@@ -1,10 +1,8 @@
-import 'package:easy_way/core/app_constant.dart';
 import 'package:hive/hive.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton
 class UserPreferencesLocalDataSource {
-
   final _isDarkModeKey = 'isDarkMode';
   final _isLanguageBangla = 'isBangla';
 
