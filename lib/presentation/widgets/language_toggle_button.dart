@@ -1,6 +1,6 @@
 import 'package:easy_way/core/app_colors.dart';
 import 'package:easy_way/l10n/l10n.dart';
-import 'package:easy_way/presentation/cubits/app_theme/app_theme_cubit.dart';
+import 'package:easy_way/presentation/cubits/user_preferences/user_preferences_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,12 +20,12 @@ class _LanguageToggleButtonState extends State<LanguageToggleButton> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     if (isFirst) {
-      final isBangla = context.watch<AppThemeCubit>().state.isBangla;
+      final isBangla = context.watch<UserPreferencesCubit>().state.isBangla;
       controller = ValueNotifier<bool>(isBangla);
       isFirst = false;
     }
     controller.addListener(() {
-      context.read<AppThemeCubit>().changeLanguage(controller.value);
+      context.read<UserPreferencesCubit>().changeLanguage(controller.value);
     });
   }
 

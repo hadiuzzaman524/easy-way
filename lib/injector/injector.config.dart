@@ -27,8 +27,8 @@ import 'package:easy_way/domain/usecases/set_theme_mode_usecase.dart' as _i1072;
 import 'package:easy_way/infrastructure/module/network_module.dart' as _i567;
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart'
     as _i535;
-import 'package:easy_way/presentation/cubits/app_theme/app_theme_cubit.dart'
-    as _i155;
+import 'package:easy_way/presentation/cubits/user_preferences/user_preferences_cubit.dart'
+    as _i570;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
@@ -68,8 +68,8 @@ _i174.GetIt $initGetIt(
   gh.factory<_i436.GetLanguageUseCase>(
     () => _i436.GetLanguageUseCase(gh<_i10.UserPreferences>()),
   );
-  gh.factory<_i155.AppThemeCubit>(
-    () => _i155.AppThemeCubit(
+  gh.factory<_i570.UserPreferencesCubit>(
+    () => _i570.UserPreferencesCubit(
       gh<_i758.GetThemeModeUseCase>(),
       gh<_i1072.SetThemeModeUseCase>(),
       gh<_i436.GetLanguageUseCase>(),

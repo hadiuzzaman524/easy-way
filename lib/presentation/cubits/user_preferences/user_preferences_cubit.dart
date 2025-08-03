@@ -4,20 +4,20 @@ import 'package:easy_way/domain/usecases/get_theme_mode_usecase.dart';
 import 'package:easy_way/domain/usecases/set_language_usecase.dart';
 import 'package:easy_way/domain/usecases/set_theme_mode_usecase.dart';
 import 'package:easy_way/gen/assets.gen.dart';
-import 'package:easy_way/presentation/cubits/app_theme/app_theme_state.dart';
+import 'package:easy_way/presentation/cubits/user_preferences/user_preferences_state.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
-class AppThemeCubit extends Cubit<AppThemeState> {
-  AppThemeCubit(
+class UserPreferencesCubit extends Cubit<UserPreferencesState> {
+  UserPreferencesCubit(
     this._getThemeModeUseCase,
     this._setThemeModeUseCase,
     this._getLanguageUseCase,
     this._setLanguageUseCase,
   ) : super(
-        const AppThemeState(
+        const UserPreferencesState(
           isDarkTheme: true,
           mapStyle: '[]',
           isBangla: false,

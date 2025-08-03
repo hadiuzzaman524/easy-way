@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:easy_way/core/app_colors.dart';
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_cubit.dart';
 import 'package:easy_way/presentation/car_connect/cubit/car_connect_state.dart';
-import 'package:easy_way/presentation/cubits/app_theme/app_theme_cubit.dart';
+import 'package:easy_way/presentation/cubits/user_preferences/user_preferences_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -20,7 +20,7 @@ class GoogleMapView extends StatelessWidget {
     final mapController = Completer<GoogleMapController>();
     final cubit = context.read<CarConnectCubit>();
     final mapStyle = context.select(
-      (AppThemeCubit cubit) => cubit.state.mapStyle,
+      (UserPreferencesCubit cubit) => cubit.state.mapStyle,
     );
 
     return BlocBuilder<CarConnectCubit, CarConnectState>(

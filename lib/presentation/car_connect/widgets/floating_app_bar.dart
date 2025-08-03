@@ -1,6 +1,6 @@
 import 'package:easy_way/gen/assets.gen.dart';
 import 'package:easy_way/l10n/l10n.dart';
-import 'package:easy_way/presentation/cubits/app_theme/app_theme_cubit.dart';
+import 'package:easy_way/presentation/cubits/user_preferences/user_preferences_cubit.dart';
 import 'package:easy_way/presentation/widgets/app_text.dart';
 import 'package:easy_way/presentation/widgets/language_toggle_button.dart';
 import 'package:flutter/material.dart';
@@ -44,7 +44,7 @@ class FloatingAppBar extends StatelessWidget {
                       : Icons.dark_mode,
                 ),
                 onPressed: () {
-                  context.read<AppThemeCubit>().changeThemeMode();
+                  context.read<UserPreferencesCubit>().changeThemeMode();
                 },
               ),
               const LanguageToggleButton(),

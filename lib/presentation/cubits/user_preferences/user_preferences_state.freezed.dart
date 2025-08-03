@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'app_theme_state.dart';
+part of 'user_preferences_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -12,20 +12,20 @@ part of 'app_theme_state.dart';
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
-mixin _$AppThemeState {
+mixin _$UserPreferencesState {
 
  bool get isDarkTheme; bool get isBangla; String get mapStyle;
-/// Create a copy of AppThemeState
+/// Create a copy of UserPreferencesState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-$AppThemeStateCopyWith<AppThemeState> get copyWith => _$AppThemeStateCopyWithImpl<AppThemeState>(this as AppThemeState, _$identity);
+$UserPreferencesStateCopyWith<UserPreferencesState> get copyWith => _$UserPreferencesStateCopyWithImpl<UserPreferencesState>(this as UserPreferencesState, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AppThemeState&&(identical(other.isDarkTheme, isDarkTheme) || other.isDarkTheme == isDarkTheme)&&(identical(other.isBangla, isBangla) || other.isBangla == isBangla)&&(identical(other.mapStyle, mapStyle) || other.mapStyle == mapStyle));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserPreferencesState&&(identical(other.isDarkTheme, isDarkTheme) || other.isDarkTheme == isDarkTheme)&&(identical(other.isBangla, isBangla) || other.isBangla == isBangla)&&(identical(other.mapStyle, mapStyle) || other.mapStyle == mapStyle));
 }
 
 
@@ -34,15 +34,15 @@ int get hashCode => Object.hash(runtimeType,isDarkTheme,isBangla,mapStyle);
 
 @override
 String toString() {
-  return 'AppThemeState(isDarkTheme: $isDarkTheme, isBangla: $isBangla, mapStyle: $mapStyle)';
+  return 'UserPreferencesState(isDarkTheme: $isDarkTheme, isBangla: $isBangla, mapStyle: $mapStyle)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $AppThemeStateCopyWith<$Res>  {
-  factory $AppThemeStateCopyWith(AppThemeState value, $Res Function(AppThemeState) _then) = _$AppThemeStateCopyWithImpl;
+abstract mixin class $UserPreferencesStateCopyWith<$Res>  {
+  factory $UserPreferencesStateCopyWith(UserPreferencesState value, $Res Function(UserPreferencesState) _then) = _$UserPreferencesStateCopyWithImpl;
 @useResult
 $Res call({
  bool isDarkTheme, bool isBangla, String mapStyle
@@ -53,14 +53,14 @@ $Res call({
 
 }
 /// @nodoc
-class _$AppThemeStateCopyWithImpl<$Res>
-    implements $AppThemeStateCopyWith<$Res> {
-  _$AppThemeStateCopyWithImpl(this._self, this._then);
+class _$UserPreferencesStateCopyWithImpl<$Res>
+    implements $UserPreferencesStateCopyWith<$Res> {
+  _$UserPreferencesStateCopyWithImpl(this._self, this._then);
 
-  final AppThemeState _self;
-  final $Res Function(AppThemeState) _then;
+  final UserPreferencesState _self;
+  final $Res Function(UserPreferencesState) _then;
 
-/// Create a copy of AppThemeState
+/// Create a copy of UserPreferencesState
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? isDarkTheme = null,Object? isBangla = null,Object? mapStyle = null,}) {
   return _then(_self.copyWith(
@@ -74,8 +74,8 @@ as String,
 }
 
 
-/// Adds pattern-matching-related methods to [AppThemeState].
-extension AppThemeStatePatterns on AppThemeState {
+/// Adds pattern-matching-related methods to [UserPreferencesState].
+extension UserPreferencesStatePatterns on UserPreferencesState {
 /// A variant of `map` that fallback to returning `orElse`.
 ///
 /// It is equivalent to doing:
@@ -88,10 +88,10 @@ extension AppThemeStatePatterns on AppThemeState {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AppThemeState value)?  $default,{required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserPreferencesState value)?  $default,{required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _AppThemeState() when $default != null:
+case _UserPreferencesState() when $default != null:
 return $default(_that);case _:
   return orElse();
 
@@ -110,10 +110,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AppThemeState value)  $default,){
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserPreferencesState value)  $default,){
 final _that = this;
 switch (_that) {
-case _AppThemeState():
+case _UserPreferencesState():
 return $default(_that);case _:
   throw StateError('Unexpected subclass');
 
@@ -131,10 +131,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AppThemeState value)?  $default,){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserPreferencesState value)?  $default,){
 final _that = this;
 switch (_that) {
-case _AppThemeState() when $default != null:
+case _UserPreferencesState() when $default != null:
 return $default(_that);case _:
   return null;
 
@@ -154,7 +154,7 @@ return $default(_that);case _:
 
 @optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool isDarkTheme,  bool isBangla,  String mapStyle)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _AppThemeState() when $default != null:
+case _UserPreferencesState() when $default != null:
 return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
   return orElse();
 
@@ -175,7 +175,7 @@ return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
 
 @optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool isDarkTheme,  bool isBangla,  String mapStyle)  $default,) {final _that = this;
 switch (_that) {
-case _AppThemeState():
+case _UserPreferencesState():
 return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
   throw StateError('Unexpected subclass');
 
@@ -195,7 +195,7 @@ return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
 
 @optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool isDarkTheme,  bool isBangla,  String mapStyle)?  $default,) {final _that = this;
 switch (_that) {
-case _AppThemeState() when $default != null:
+case _UserPreferencesState() when $default != null:
 return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
   return null;
 
@@ -207,25 +207,25 @@ return $default(_that.isDarkTheme,_that.isBangla,_that.mapStyle);case _:
 /// @nodoc
 
 
-class _AppThemeState implements AppThemeState {
-  const _AppThemeState({required this.isDarkTheme, required this.isBangla, required this.mapStyle});
+class _UserPreferencesState implements UserPreferencesState {
+  const _UserPreferencesState({required this.isDarkTheme, required this.isBangla, required this.mapStyle});
   
 
 @override final  bool isDarkTheme;
 @override final  bool isBangla;
 @override final  String mapStyle;
 
-/// Create a copy of AppThemeState
+/// Create a copy of UserPreferencesState
 /// with the given fields replaced by the non-null parameter values.
 @override @JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
-_$AppThemeStateCopyWith<_AppThemeState> get copyWith => __$AppThemeStateCopyWithImpl<_AppThemeState>(this, _$identity);
+_$UserPreferencesStateCopyWith<_UserPreferencesState> get copyWith => __$UserPreferencesStateCopyWithImpl<_UserPreferencesState>(this, _$identity);
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AppThemeState&&(identical(other.isDarkTheme, isDarkTheme) || other.isDarkTheme == isDarkTheme)&&(identical(other.isBangla, isBangla) || other.isBangla == isBangla)&&(identical(other.mapStyle, mapStyle) || other.mapStyle == mapStyle));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserPreferencesState&&(identical(other.isDarkTheme, isDarkTheme) || other.isDarkTheme == isDarkTheme)&&(identical(other.isBangla, isBangla) || other.isBangla == isBangla)&&(identical(other.mapStyle, mapStyle) || other.mapStyle == mapStyle));
 }
 
 
@@ -234,15 +234,15 @@ int get hashCode => Object.hash(runtimeType,isDarkTheme,isBangla,mapStyle);
 
 @override
 String toString() {
-  return 'AppThemeState(isDarkTheme: $isDarkTheme, isBangla: $isBangla, mapStyle: $mapStyle)';
+  return 'UserPreferencesState(isDarkTheme: $isDarkTheme, isBangla: $isBangla, mapStyle: $mapStyle)';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class _$AppThemeStateCopyWith<$Res> implements $AppThemeStateCopyWith<$Res> {
-  factory _$AppThemeStateCopyWith(_AppThemeState value, $Res Function(_AppThemeState) _then) = __$AppThemeStateCopyWithImpl;
+abstract mixin class _$UserPreferencesStateCopyWith<$Res> implements $UserPreferencesStateCopyWith<$Res> {
+  factory _$UserPreferencesStateCopyWith(_UserPreferencesState value, $Res Function(_UserPreferencesState) _then) = __$UserPreferencesStateCopyWithImpl;
 @override @useResult
 $Res call({
  bool isDarkTheme, bool isBangla, String mapStyle
@@ -253,17 +253,17 @@ $Res call({
 
 }
 /// @nodoc
-class __$AppThemeStateCopyWithImpl<$Res>
-    implements _$AppThemeStateCopyWith<$Res> {
-  __$AppThemeStateCopyWithImpl(this._self, this._then);
+class __$UserPreferencesStateCopyWithImpl<$Res>
+    implements _$UserPreferencesStateCopyWith<$Res> {
+  __$UserPreferencesStateCopyWithImpl(this._self, this._then);
 
-  final _AppThemeState _self;
-  final $Res Function(_AppThemeState) _then;
+  final _UserPreferencesState _self;
+  final $Res Function(_UserPreferencesState) _then;
 
-/// Create a copy of AppThemeState
+/// Create a copy of UserPreferencesState
 /// with the given fields replaced by the non-null parameter values.
 @override @pragma('vm:prefer-inline') $Res call({Object? isDarkTheme = null,Object? isBangla = null,Object? mapStyle = null,}) {
-  return _then(_AppThemeState(
+  return _then(_UserPreferencesState(
 isDarkTheme: null == isDarkTheme ? _self.isDarkTheme : isDarkTheme // ignore: cast_nullable_to_non_nullable
 as bool,isBangla: null == isBangla ? _self.isBangla : isBangla // ignore: cast_nullable_to_non_nullable
 as bool,mapStyle: null == mapStyle ? _self.mapStyle : mapStyle // ignore: cast_nullable_to_non_nullable

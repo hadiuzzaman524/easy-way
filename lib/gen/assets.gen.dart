@@ -14,11 +14,15 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/app_logo.png
+  AssetGenImage get appLogo =>
+      const AssetGenImage('assets/images/app_logo.png');
+
   /// File path: assets/images/easyway.png
   AssetGenImage get easyway => const AssetGenImage('assets/images/easyway.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [easyway];
+  List<AssetGenImage> get values => [appLogo, easyway];
 }
 
 class $AssetsJsonGen {
