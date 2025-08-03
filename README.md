@@ -1,11 +1,13 @@
+<table>
+  <tr>
+    <td><img src="/assets/images/easyway.png" alt="App Logo" width="150"/></td>
+    <td>
+      <h2>Overview</h2>
+      <strong>Easy Way</strong> is a cross-platform mobile app for Android and iOS that allows users to quickly select two points on a map and instantly displays the optimal car route between them. With an intuitive, interactive map, users can easily mark start and end locations and see a clear, real-time driving route calculated using mapping APIs.
+    </td>
+  </tr>
+</table>
 
-# Easy Way
-
-## Overview
-
-**Easy Way** lets users quickly select two points on a map and instantly displays the optimal car route between them. With an intuitive, interactive map, users can easily mark start and end locations and see a clear, real-time driving route calculated using mapping APIs.
-
----
 
 ## 🔧 Flavors & Running the App
 
