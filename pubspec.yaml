@@ -37,7 +37,7 @@ dependencies:
   latlong2: ^0.9.1
   logger: ^2.6.1
   open_route_service: ^1.2.7
-  retrofit: ^4.7.0
+  retrofit: ^4.7.1
 
 
 dev_dependencies:
